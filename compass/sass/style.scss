@@ -1,0 +1,151 @@
+
+// *************** Nav Bar Styling ********************
+#nav-bar{
+	max-width: 900px;
+	margin: auto;
+	font-weight: bold;
+
+	border: none;
+	padding: 0px;
+	font-size: 14px;
+}
+
+
+#nav-bar ul{
+	background-color: #232F3E;
+	height: 50px;
+	list-style: none;
+	margin: 0px;
+	padding: 0px;
+}
+
+/*Top level element (li)*/
+#nav-bar ul li{
+	float: left;
+	padding: 0px 0px 0px 15px;
+}
+
+/*Top level element link*/
+#nav-bar ul li a{
+	color: white;
+	font-weight: normal;
+	line-height: 50px;
+	padding: 8px 25px;
+	margin: 0px;
+	text-decoration: none;
+	text-align: center;
+}
+
+/*Hovering over a top level element*/
+#nav-bar ul li a:hover{
+	background: #3B4859;
+	color: white;
+	text-decoration: none;
+}
+
+/*Child elements of the top level elements*/
+#nav-bar ul li ul{
+	display: none;
+	height: auto;
+	position: absolute;
+	width: 200px;
+	padding: 0px;
+	margin: 0px;
+	border: none;
+}
+
+#nav-bar ul li:hover ul{
+	display: block;
+}
+
+#nav-bar ul ul{
+	border-radius: 0px;
+}
+
+#nav-bar li li{
+	display: block;
+	float: none;
+	width: 200px;
+	margin: 0px;
+	padding: 0px;
+	background-color: #546375
+}
+
+#nav-bar ul li:hover ul li a{
+	background: none;
+}
+
+#nav-bar ul li ul li a{
+	height: 50px;
+	font-size: 12px;
+	padding: 0px 10px 0px 15px;
+	margin: 0px;
+}
+
+#nav-bar ul li ul li a:hover{
+	color: white;
+	border: 0px;
+	background: #3B4859;
+	text-decoration: none;
+	// box-shadow: inset 0px 0px 7px 2px rgb(0,0, .3);
+}
+
+//************ END NAV BAR STYLING ***************
+
+
+
+
+
+#banner-wrapper {
+	border-bottom: 7px solid #232F3E;
+}
+
+#banner {
+	width: 80%;
+	margin: auto;
+}
+
+#banner img{
+	display: block;
+	width: 100%;
+	max-width: 1000px;
+	margin: auto;
+}
+
+
+
+
+
+#sticky-order-info-wrapper {
+	float: right;
+	border: 1px solid;
+	width: 30%;
+	position: relative;
+}
+
+.option {
+	border: 1px solid;
+
+}
+
+#footer {
+	clear: both;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
