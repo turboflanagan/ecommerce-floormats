@@ -125,7 +125,16 @@
     position: relative;
     background-color: #2C2C2C;
     color: #F5F5F5;
-    clear: both;
+    overflow: hidden;
+
+    #sticky-order-info-wrapper.fixed{
+    display: block;
+    position: fixed;
+    top: 0;
+    width: 60%;
+    margin-left: 120px;
+    }
+
 }
 
 .option {
@@ -142,6 +151,7 @@
 #content-body {
 	margin-left: 40px;
 	width: 70%;
+	overflow: hidden;
 	float: left;
 	border: 1px solid;
 }
@@ -150,35 +160,11 @@
 	height: 100px;
 	width: 100px;
 	background: url('/images/Embroidery_Colors.jpg');
-    // background-size sets the size of the image to make the sprite portion the right size for rendering.
+    // background-size sets the size of the image to make the 
+    //sprite portion the right size for rendering.
     background-size: 330px 328px;
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 #footer {
