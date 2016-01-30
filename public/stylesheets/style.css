@@ -97,18 +97,18 @@
   text-decoration: none;
 }
 
-/* line 99, ../../compass/sass/style.scss */
+/* line 97, ../../compass/sass/style.scss */
 #banner-wrapper {
   border-bottom: 7px solid #232F3E;
 }
 
-/* line 103, ../../compass/sass/style.scss */
+/* line 101, ../../compass/sass/style.scss */
 #banner {
   width: 80%;
   margin: auto;
 }
 
-/* line 108, ../../compass/sass/style.scss */
+/* line 106, ../../compass/sass/style.scss */
 #banner img {
   display: block;
   width: 100%;
@@ -116,20 +116,40 @@
   margin: auto;
 }
 
-/* line 119, ../../compass/sass/style.scss */
+/* line 120, ../../compass/sass/style.scss */
 #sticky-order-info-wrapper {
   float: right;
   border: 1px solid;
-  width: 30%;
+  width: 340px;
+  opacity: 1;
   position: relative;
+  background-color: #2C2C2C;
+  color: #F5F5F5;
+  clear: both;
 }
 
-/* line 126, ../../compass/sass/style.scss */
+/* line 131, ../../compass/sass/style.scss */
 .option {
   border: 1px solid;
 }
 
-/* line 131, ../../compass/sass/style.scss */
+/* line 142, ../../compass/sass/style.scss */
+#content-body {
+  margin-left: 40px;
+  width: 70%;
+  float: left;
+  border: 1px solid;
+}
+
+/* line 149, ../../compass/sass/style.scss */
+#sprite {
+  height: 100px;
+  width: 100px;
+  background: url("/images/Embroidery_Colors.jpg");
+  background-size: 330px 328px;
+}
+
+/* line 184, ../../compass/sass/style.scss */
 #footer {
   clear: both;
 }

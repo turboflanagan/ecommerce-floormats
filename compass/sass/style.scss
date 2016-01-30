@@ -93,9 +93,7 @@
 //************ END NAV BAR STYLING ***************
 
 
-
-
-
+// **************** BANNER STYLING *****************
 #banner-wrapper {
 	border-bottom: 7px solid #232F3E;
 }
@@ -111,22 +109,77 @@
 	max-width: 1000px;
 	margin: auto;
 }
+// **************** END BANNER STYLING ****************
 
 
 
 
+
+// ****************** STICKY ORDER INFO STYLING *****************
 
 #sticky-order-info-wrapper {
 	float: right;
 	border: 1px solid;
-	width: 30%;
-	position: relative;
+	width: 340px;
+    opacity: 1;
+    position: relative;
+    background-color: #2C2C2C;
+    color: #F5F5F5;
+    clear: both;
 }
 
 .option {
 	border: 1px solid;
 
 }
+
+
+// ****************** END STICKY ORDER INFO STYLING *****************
+
+
+// ****************** GENERIC SECTION STYLING ***************
+
+#content-body {
+	margin-left: 40px;
+	width: 70%;
+	float: left;
+	border: 1px solid;
+}
+
+#sprite {
+	height: 100px;
+	width: 100px;
+	background: url('/images/Embroidery_Colors.jpg');
+    // background-size sets the size of the image to make the sprite portion the right size for rendering.
+    background-size: 330px 328px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 #footer {
 	clear: both;
