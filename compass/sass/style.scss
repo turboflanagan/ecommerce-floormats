@@ -127,7 +127,7 @@
     color: #F5F5F5;
     overflow: hidden;
 
-    #sticky-order-info-wrapper.fixed{
+    #sticky-order-info-wrapper.fixed {
     display: block;
     position: fixed;
     top: 0;
@@ -135,6 +135,12 @@
     margin-left: 120px;
     }
 
+    #order-info-header {
+
+    }
+    #order-detail-wrapper {
+    	position: relative;
+    }
 }
 
 .option {

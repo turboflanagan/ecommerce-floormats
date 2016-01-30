@@ -128,8 +128,7 @@
 
 
 <div id="sticky-order-info-wrapper" class="container">
-	<div id="order-info-header">
-	</div>
+	<div id="order-info-header"></div>
 	<div id="order-detail-wrapper">
 		<div class="row">
 			<div class="col-xs-7">
@@ -152,7 +151,30 @@
 </div>
 
 
-
+<script type="text/javascript">
+	function moveScroller() {
+		var move = function() {
+			var st = $(window).scrollTop();
+			var ot = $("#order-info-header").offset().top;
+			var s = $("#order-detail-wrapper");
+			if(st > ot) {
+				s.css({
+					position: "fixed",
+					top: "0px"
+				});
+			} else {
+				if(st <= ot) {
+					s.css({
+						position: "relative",
+						top: ""
+					});
+				}
+			}
+		};
+		$(window).scroll(move);
+		move();
+	}
+</script>
 
 
 

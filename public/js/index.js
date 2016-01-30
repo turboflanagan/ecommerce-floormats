@@ -1,10 +1,24 @@
-.$(document).ready(function() {
-	window.scroll(function() {
-		var distanceFromTop = $(document).scrollTop();
-		if(distanceFromTop >= $('#banner-wrapper').height()) {
-			$('#sticky-order-info-wrapper').addClass('fixed');
-		}else{
-			$('#sticky-order-info-wrapper').removeClass('fixed');
-		}
-	});
-});
+function moveScroller() {
+    var move = function() {
+        var st = $(window).scrollTop();
+        var ot = $("#order-info-header").offset().top;
+        var s = $("#order-detail-wrapper");
+        if(st > ot) {
+            s.css({
+                position: "fixed",
+                top: "0px"
+            });
+        } else {
+            if(st <= ot) {
+                s.css({
+                    position: "relative",
+                    top: ""
+                });
+            }
+        }
+    };
+    $(window).scroll(move);
+    move();
+}
+
+
