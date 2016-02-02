@@ -21,4 +21,7 @@ function moveScroller() {
     move();
 }
 
+moveScroller();
 
+
+// s.removeClass("unstuck").addClass("fixed");

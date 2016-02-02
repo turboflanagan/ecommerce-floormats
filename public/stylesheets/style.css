@@ -134,18 +134,29 @@
   top: 0;
   width: 60%;
   margin-left: 120px;
+  background-color: #2C2C2C;
+  color: #F5F5F5;
 }
-/* line 141, ../../compass/sass/style.scss */
+/* line 143, ../../compass/sass/style.scss */
 #sticky-order-info-wrapper #order-detail-wrapper {
   position: relative;
 }
+/* line 145, ../../compass/sass/style.scss */
+#sticky-order-info-wrapper #order-detail-wrapper .unstuck {
+  position: relative;
+}
+/* line 149, ../../compass/sass/style.scss */
+#sticky-order-info-wrapper #order-detail-wrapper .fixed {
+  position: fixed;
+  top: 0px;
+}
 
-/* line 146, ../../compass/sass/style.scss */
+/* line 156, ../../compass/sass/style.scss */
 .option {
   border: 1px solid;
 }
 
-/* line 157, ../../compass/sass/style.scss */
+/* line 167, ../../compass/sass/style.scss */
 #content-body {
   margin-left: 40px;
   width: 70%;
@@ -154,7 +165,7 @@
   border: 1px solid;
 }
 
-/* line 165, ../../compass/sass/style.scss */
+/* line 175, ../../compass/sass/style.scss */
 #sprite {
   height: 100px;
   width: 100px;
@@ -162,7 +173,7 @@
   background-size: 330px 328px;
 }
 
-/* line 176, ../../compass/sass/style.scss */
+/* line 186, ../../compass/sass/style.scss */
 #footer {
   clear: both;
 }
