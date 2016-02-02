@@ -127,53 +127,180 @@
   color: #F5F5F5;
   overflow: hidden;
 }
-/* line 130, ../../compass/sass/style.scss */
-#sticky-order-info-wrapper #sticky-order-info-wrapper.fixed {
+/* line 136, ../../compass/sass/style.scss */
+#sticky-order-info-wrapper #order-detail-wrapper {
+  position: relative;
+}
+
+/* line 141, ../../compass/sass/style.scss */
+.fixed {
   display: block;
-  position: fixed;
+  position: fixed !important;
   top: 0;
   width: 60%;
   margin-left: 120px;
   background-color: #2C2C2C;
   color: #F5F5F5;
 }
-/* line 143, ../../compass/sass/style.scss */
-#sticky-order-info-wrapper #order-detail-wrapper {
-  position: relative;
-}
-/* line 145, ../../compass/sass/style.scss */
-#sticky-order-info-wrapper #order-detail-wrapper .unstuck {
-  position: relative;
-}
-/* line 149, ../../compass/sass/style.scss */
-#sticky-order-info-wrapper #order-detail-wrapper .fixed {
-  position: fixed;
-  top: 0px;
-}
 
-/* line 156, ../../compass/sass/style.scss */
+/* line 151, ../../compass/sass/style.scss */
 .option {
   border: 1px solid;
 }
 
-/* line 167, ../../compass/sass/style.scss */
+/* line 162, ../../compass/sass/style.scss */
 #content-body {
-  margin-left: 40px;
+  margin-left: 3%;
   width: 70%;
   overflow: hidden;
   float: left;
   border: 1px solid;
 }
 
-/* line 175, ../../compass/sass/style.scss */
-#sprite {
-  height: 100px;
-  width: 100px;
-  background: url("/images/Embroidery_Colors.jpg");
-  background-size: 330px 328px;
+/* line 170, ../../compass/sass/style.scss */
+.sprite-list li {
+  height: 115px;
+  width: 150px;
+  background: url("/images/Carpet_Colors.jpg");
+  background-size: 1400px;
+  background-repeat: no-repeat;
+  list-style-type: none;
+  display: inline-block;
+  margin: 3px;
 }
 
-/* line 186, ../../compass/sass/style.scss */
+/* line 183, ../../compass/sass/style.scss */
+#carpet-sprite-hgreen {
+  background-position: -30px -112px;
+}
+
+/* line 187, ../../compass/sass/style.scss */
+#carpet-sprite-nblue {
+  background-position: -230px -112px;
+}
+
+/* line 191, ../../compass/sass/style.scss */
+#carpet-sprite-burg {
+  background-position: -430px -112px;
+}
+
+/* line 195, ../../compass/sass/style.scss */
+#carpet-sprite-red {
+  background-position: -625px -112px;
+}
+
+/* line 199, ../../compass/sass/style.scss */
+#carpet-sprite-rblue {
+  background-position: -823px -112px;
+}
+
+/* line 203, ../../compass/sass/style.scss */
+#carpet-sprite-purp {
+  background-position: -1015px -112px;
+}
+
+/* line 207, ../../compass/sass/style.scss */
+#carpet-sprite-teak {
+  background-position: -1217px -112px;
+}
+
+/* line 211, ../../compass/sass/style.scss */
+#carpet-sprite-beige {
+  background-position: -30px -275px;
+}
+
+/* line 215, ../../compass/sass/style.scss */
+#carpet-sprite-greyBerber {
+  background-position: -230px -275px;
+}
+
+/* line 219, ../../compass/sass/style.scss */
+#carpet-sprite-beigeBerber {
+  background-position: -430px -275px;
+}
+
+/* line 223, ../../compass/sass/style.scss */
+#carpet-sprite-kgreen {
+  background-position: -630px -275px;
+}
+
+/* line 227, ../../compass/sass/style.scss */
+#carpet-sprite-orange {
+  background-position: -825px -275px;
+}
+
+/* line 231, ../../compass/sass/style.scss */
+#carpet-sprite-medGray {
+  background-position: -1015px -275px;
+}
+
+/* line 235, ../../compass/sass/style.scss */
+#carpet-sprite-dkGray {
+  background-position: -1200px -275px;
+}
+
+/* line 239, ../../compass/sass/style.scss */
+#carpet-sprite-cream {
+  background-position: -30px -435px;
+}
+
+/* line 243, ../../compass/sass/style.scss */
+#carpet-sprite-black {
+  background-position: -230px -435px;
+}
+
+/* line 247, ../../compass/sass/style.scss */
+#carpet-sprite-brown {
+  background-position: -430px -435px;
+}
+
+/* line 251, ../../compass/sass/style.scss */
+#carpet-sprite-mocha {
+  background-position: -630px -435px;
+}
+
+/* line 256, ../../compass/sass/style.scss */
+#embroidery-sprite {
+  height: 150px;
+  width: 150px;
+  background: url("/images/Embroidery_Colors.jpg");
+  background-size: 350px 350px;
+}
+
+/* line 266, ../../compass/sass/style.scss */
+#select-mats-body {
+  border: 1px solid;
+}
+
+/* line 270, ../../compass/sass/style.scss */
+.mat-count {
+  display: block;
+}
+
+/* line 274, ../../compass/sass/style.scss */
+.mat-body-box {
+  display: inline-block;
+  margin-left: 25px;
+  vertical-align: top;
+}
+
+/* line 281, ../../compass/sass/style.scss */
+#carpet-color-chart {
+  background: url("/images/Embroidery_Colors.jpg");
+  background-size: 500px 700px;
+  width: 100%;
+  height: 500px;
+  background-repeat: no-repeat;
+}
+
+/* line 288, ../../compass/sass/style.scss */
+.option-image {
+  max-width: 400px;
+  margin: 5px;
+  border: 1px solid;
+}
+
+/* line 311, ../../compass/sass/style.scss */
 #footer {
   clear: both;
 }
