@@ -20,7 +20,7 @@
 					<div id="select-mats-img1">
 						<img src="/images/4mats.jpeg" alt="4 Mat Option">
 					</div>
-					<label><input type="checkbox" name="4mats" value="4 pc" ng-click="selectMat(4)">4 Pc Mat Set</label>
+					<label><input ng-model="matFour" ng-value="false" ng-change="matFour ? selectMat(4) : selectMat(0)" type="checkbox" name="4mats" value="4 pc">4 Pc Mat Set</label>
 					<div class="mat-set-price">
 						<!-- Angular Price Here --><h1>$125</h1>
 					</div>
@@ -29,7 +29,7 @@
 					<div id="select-mats-img2">
 						<img src="/images/2mats.jpeg" alt="2 Mat Option">
 					</div>
-					<label><input type="checkbox" name="2mats" value="2 pc">2 Pc Mat Set</label>
+					<label><input ng-model="matTwo" ng-value="false" ng-change="matTwo ? selectMat(2) : selectMat(0)" type="checkbox" name="2mats" value="2 pc">2 Pc Mat Set</label>
 					<div class="mat-set-price">
 					<!-- Angular Price Here --><h1>$80</h1>
 					</div>
@@ -48,7 +48,7 @@
 			<div id="select-carpet-color" class="select-inner">
 				<div class="">
 					<ul class="sprite-list">
-						<a href="javascript: void()"><li id="carpet-sprite-hgreen"></li></a>
+						<a ng-click="addColor(Hunter Green)"href="javascript: void()"><li id="carpet-sprite-hgreen"></li></a>
 						<a href="javascript: void()"><li id="carpet-sprite-nblue"></li></a>
 						<a href="javascript: void()"><li id="carpet-sprite-burg"></li></a>
 						<a href="javascript: void()"><li id="carpet-sprite-red"></li></a>
@@ -155,20 +155,23 @@
 <div id="sticky-order-info-wrapper" class="container">
 	<div id="order-info-header"></div>
 	<div id="order-detail-wrapper" class="unstuck">
-		<div class="row">
-			<div class="col-xs-7">
-				<h3>Base Mat Option</h3>
-				<div>{{baseMatOption}}</div>
+		<div>
+			<div>
+				<div>
+					<h3 style="text-align: center;">Build Your Mats</h3>
+					<div></div>
+				</div>
 			</div>
 			<div class="option">
-				<h3>Option 1</h3>
+				<h3>Mat Option {{baseMatOption}}</h3>
 			</div>
 			<div class="option">
-				<h3>Option 2</h3>
+				<h3>Carpet Color {{matColorOption}}</h3>
 			</div>
 			<div class="option">
-				<h3>Custom Option</h3>
+				<h3>Style Option</h3>
 			</div>
+			
 			<div id="total" class="option">
 				<h3>Total</h3>
 			</div>

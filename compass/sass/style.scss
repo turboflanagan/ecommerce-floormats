@@ -4,7 +4,6 @@
 	max-width: 900px;
 	margin: auto;
 	font-weight: bold;
-
 	border: none;
 	padding: 0px;
 	font-size: 14px;
@@ -119,34 +118,47 @@
 
 #sticky-order-info-wrapper {
 	float: right;
-	border: 1px solid;
-	width: 340px;
-    opacity: 1;
+	width: 25%;
     position: relative;
-    background-color: #2C2C2C;
-    color: #F5F5F5;
     overflow: hidden;
+    display: block;
+    height: 500px;	
 
-
-
-    #order-info-header {
-
-    }
-
-    #order-detail-wrapper {
-    	position: relative;
-    }
+    
 }
+
+#order-detail-wrapper {
+    	position: relative;
+    	background-color: #2C2C2C;
+    	color: #F5F5F5;
+    	margin: 10px;
+    	padding: 5px;
+    }
 
 .fixed {
 	display: block;
 	position: fixed !important;
 	top: 0;
-	width: 60%;
-	margin-left: 120px;
+	width: 25%;
 	background-color: #2C2C2C;
 	color: #F5F5F5;
+    // overflow: hidden;
+	border: 1px solid;
+	margin: 10px;
+   	padding: 5px;
+   	height: 400px;
 }
+
+// .unstuck {
+// 	display: block;
+// 	position: relative;
+// 	width: 25%;
+// 	background-color: #2C2C2C;
+// 	color: #F5F5F5;
+//     // overflow: hidden;
+// 	border: 1px solid;
+// 	float: right;
+// }
 
 .option {
 	border: 1px solid;
