@@ -21,7 +21,7 @@ function moveScroller() {
 moveScroller();
 
 $("a").click(function(event){
-    console.log($(this));
+    // console.log($(this));
     event.preventDefault();
 });
 

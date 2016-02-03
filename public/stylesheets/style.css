@@ -288,9 +288,15 @@
   display: inline-block;
   margin-left: 25px;
   vertical-align: top;
+  height: 100%;
 }
 
-/* line 293, ../../compass/sass/style.scss */
+/* line 294, ../../compass/sass/style.scss */
+.mat-set-price {
+  vertical-align: bottom;
+}
+
+/* line 298, ../../compass/sass/style.scss */
 #carpet-color-chart {
   background: url("/images/Embroidery_Colors.jpg");
   background-size: 500px 700px;
@@ -299,14 +305,14 @@
   background-repeat: no-repeat;
 }
 
-/* line 300, ../../compass/sass/style.scss */
+/* line 305, ../../compass/sass/style.scss */
 .option-image {
   max-width: 400px;
   margin: 5px;
   border: 1px solid;
 }
 
-/* line 323, ../../compass/sass/style.scss */
+/* line 328, ../../compass/sass/style.scss */
 #footer {
   clear: both;
 }
