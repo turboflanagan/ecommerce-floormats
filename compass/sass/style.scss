@@ -118,7 +118,7 @@
 
 #sticky-order-info-wrapper {
 	float: right;
-	width: 25%;
+	width: 30%;
     position: relative;
     overflow: hidden;
     display: block;
@@ -128,25 +128,28 @@
 }
 
 #order-detail-wrapper {
-    	position: relative;
-    	background-color: #2C2C2C;
-    	color: #F5F5F5;
-    	margin: 10px;
-    	padding: 5px;
-    }
+	position: relative;
+	background-color: #2C2C2C;
+	color: #F5F5F5;
+	margin: 10px;
+	padding: 5px;
+	height: 400px;
+	display: block;
+}
 
 .fixed {
 	display: block;
-	position: fixed !important;
+	position: fixed;
 	top: 0;
-	width: 25%;
-	background-color: #2C2C2C;
+	right: 0;
+	width: 30%;
 	color: #F5F5F5;
     // overflow: hidden;
 	border: 1px solid;
 	margin: 10px;
-   	padding: 5px;
+   	// padding: 5px;
    	height: 400px;
+   	margin-left: auto;
 }
 
 // .unstuck {
@@ -173,10 +176,29 @@
 
 #content-body {
 	margin-left: 3%;
-	width: 70%;
+	width: 65%;
 	overflow: hidden;
 	float: left;
+}
+
+#options-wrapper-style {
+
+}
+.select-inner {
 	border: 1px solid;
+	border-radius: 4px;
+}
+
+#button-box {
+	text-align: center;
+}
+
+.button {
+	margin: 10px;
+}
+
+.thread-button {
+	display: inline-block;
 }
 
 .sprite-list li {
@@ -190,6 +212,21 @@
     list-style-type: none;
     display:inline-block;
     margin: 3px;
+    border-radius: 4px;	
+}
+
+.sprite-list-thread li {
+	height: 80px;
+	width: 100px;
+	background: url('/images/Embroidery_Colors.jpg');
+    // background-size sets the size of the image to make the 
+    //sprite portion the right size for rendering.
+    background-size: 1400px;
+    background-repeat: no-repeat;
+    list-style-type: none;
+    display:inline-block;
+    margin: 3px;
+    border-radius: 4px;	
 }
 
 #carpet-sprite-hgreen {
@@ -275,6 +312,151 @@
 
 }
 
+.thread-label {
+    margin-right: 25px;
+    border: 1px solid;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+#thread-sprite-beige {
+    background-position: -45px -125px;	
+}
+
+#thread-sprite-black {
+    background-position: -230px -125px;	
+}
+
+#thread-sprite-ltBrown {
+    background-position: -430px -125px;	
+}
+
+#thread-sprite-khaki {
+    background-position: -625px -125px;	
+}
+
+#thread-sprite-dkBrown {
+    background-position: -823px -125px;	
+}
+
+#thread-sprite-ltBlue {
+    background-position: -1015px -125px;	
+}
+
+#thread-sprite-royalBlue {
+    background-position: -1217px -125px;	
+}
+
+#thread-sprite-navyBlue {
+    background-position: -75px -290px;	
+}
+
+#thread-sprite-yellow {
+    background-position: -230px -290px;	
+}
+
+#thread-sprite-gold {
+    background-position: -430px -290px;	
+}
+
+#thread-sprite-ltGold {
+    background-position: -630px -290px;	
+}
+
+#thread-sprite-orange {
+    background-position: -825px -290px;	
+}
+
+#thread-sprite-ltGreen {
+    background-position: -1015px -290px;	
+}
+
+#thread-sprite-dkGreen {
+    background-position: -1200px -290px;	
+}
+
+#thread-sprite-ltPink {
+    background-position: -45px -450px;	
+}
+
+#thread-sprite-pink {
+    background-position: -230px -450px;	
+}
+
+#thread-sprite-hotPink {
+    background-position: -430px -450px;	
+}
+
+#thread-sprite-medBlue {
+    background-position: -630px -450px;	
+}
+
+#thread-sprite-medBrown {
+    background-position: -830px -450px;	
+}
+
+#thread-sprite-tourquoise {
+    background-position: -1030px -450px;	
+}
+
+#thread-sprite-kellyGreen {
+    background-position: -1230px -450px;	
+}
+
+#thread-sprite-limeGreen {
+    background-position: -45px -625px;	
+}
+
+#thread-sprite-teal {
+    background-position: -245px -625px;	
+}
+
+#thread-sprite-brickRed {
+    background-position: -445px -625px;	
+}
+
+#thread-sprite-burgundy {
+    background-position: -645px -625px;	
+}
+
+#thread-sprite-purple {
+    background-position: -845px -625px;	
+}
+
+#thread-sprite-ltPurple {
+    background-position: -1045px -625px;	
+}
+
+#thread-sprite-dkPurple {
+    background-position: -1245px -625px;	
+}
+
+#thread-sprite-silver {
+    background-position: -45px -775px;	
+}
+
+#thread-sprite-ltSilver {
+    background-position: -245px -775px;	
+}
+
+#thread-sprite-dkGray {
+    background-position: -445px -775px;	
+}
+
+#thread-sprite-cream {
+    background-position: -645px -775px;	
+}
+
+#thread-sprite-white {
+    background-position: -845px -775px;	
+}
+
+#thread-sprite-brightRed {
+    background-position: -1045px -775px;	
+}
+
+
+
 #select-mats-body{
 	border: 1px solid;
 }
@@ -309,8 +491,14 @@
 }
 
 
+#carpet-sprite-hgreen {
+	cursor: pointer;
+}
 
+.sprite-image {
+	cursor: pointer;
 
+}
 
 
 

@@ -119,7 +119,7 @@
 /* line 119, ../../compass/sass/style.scss */
 #sticky-order-info-wrapper {
   float: right;
-  width: 25%;
+  width: 30%;
   position: relative;
   overflow: hidden;
   display: block;
@@ -133,37 +133,59 @@
   color: #F5F5F5;
   margin: 10px;
   padding: 5px;
+  height: 400px;
+  display: block;
 }
 
-/* line 138, ../../compass/sass/style.scss */
+/* line 140, ../../compass/sass/style.scss */
 .fixed {
   display: block;
-  position: fixed !important;
+  position: fixed;
   top: 0;
-  width: 25%;
-  background-color: #2C2C2C;
+  right: 0;
+  width: 30%;
   color: #F5F5F5;
   border: 1px solid;
   margin: 10px;
-  padding: 5px;
   height: 400px;
+  margin-left: auto;
 }
 
-/* line 163, ../../compass/sass/style.scss */
+/* line 166, ../../compass/sass/style.scss */
 .option {
   border: 1px solid;
 }
 
-/* line 174, ../../compass/sass/style.scss */
+/* line 177, ../../compass/sass/style.scss */
 #content-body {
   margin-left: 3%;
-  width: 70%;
+  width: 65%;
   overflow: hidden;
   float: left;
-  border: 1px solid;
 }
 
-/* line 182, ../../compass/sass/style.scss */
+/* line 187, ../../compass/sass/style.scss */
+.select-inner {
+  border: 1px solid;
+  border-radius: 4px;
+}
+
+/* line 192, ../../compass/sass/style.scss */
+#button-box {
+  text-align: center;
+}
+
+/* line 196, ../../compass/sass/style.scss */
+.button {
+  margin: 10px;
+}
+
+/* line 200, ../../compass/sass/style.scss */
+.thread-button {
+  display: inline-block;
+}
+
+/* line 204, ../../compass/sass/style.scss */
 .sprite-list li {
   height: 115px;
   width: 150px;
@@ -173,99 +195,113 @@
   list-style-type: none;
   display: inline-block;
   margin: 3px;
+  border-radius: 4px;
 }
 
-/* line 195, ../../compass/sass/style.scss */
+/* line 218, ../../compass/sass/style.scss */
+.sprite-list-thread li {
+  height: 80px;
+  width: 100px;
+  background: url("/images/Embroidery_Colors.jpg");
+  background-size: 1400px;
+  background-repeat: no-repeat;
+  list-style-type: none;
+  display: inline-block;
+  margin: 3px;
+  border-radius: 4px;
+}
+
+/* line 232, ../../compass/sass/style.scss */
 #carpet-sprite-hgreen {
   background-position: -30px -112px;
 }
 
-/* line 199, ../../compass/sass/style.scss */
+/* line 236, ../../compass/sass/style.scss */
 #carpet-sprite-nblue {
   background-position: -230px -112px;
 }
 
-/* line 203, ../../compass/sass/style.scss */
+/* line 240, ../../compass/sass/style.scss */
 #carpet-sprite-burg {
   background-position: -430px -112px;
 }
 
-/* line 207, ../../compass/sass/style.scss */
+/* line 244, ../../compass/sass/style.scss */
 #carpet-sprite-red {
   background-position: -625px -112px;
 }
 
-/* line 211, ../../compass/sass/style.scss */
+/* line 248, ../../compass/sass/style.scss */
 #carpet-sprite-rblue {
   background-position: -823px -112px;
 }
 
-/* line 215, ../../compass/sass/style.scss */
+/* line 252, ../../compass/sass/style.scss */
 #carpet-sprite-purp {
   background-position: -1015px -112px;
 }
 
-/* line 219, ../../compass/sass/style.scss */
+/* line 256, ../../compass/sass/style.scss */
 #carpet-sprite-teak {
   background-position: -1217px -112px;
 }
 
-/* line 223, ../../compass/sass/style.scss */
+/* line 260, ../../compass/sass/style.scss */
 #carpet-sprite-beige {
   background-position: -30px -275px;
 }
 
-/* line 227, ../../compass/sass/style.scss */
+/* line 264, ../../compass/sass/style.scss */
 #carpet-sprite-greyBerber {
   background-position: -230px -275px;
 }
 
-/* line 231, ../../compass/sass/style.scss */
+/* line 268, ../../compass/sass/style.scss */
 #carpet-sprite-beigeBerber {
   background-position: -430px -275px;
 }
 
-/* line 235, ../../compass/sass/style.scss */
+/* line 272, ../../compass/sass/style.scss */
 #carpet-sprite-kgreen {
   background-position: -630px -275px;
 }
 
-/* line 239, ../../compass/sass/style.scss */
+/* line 276, ../../compass/sass/style.scss */
 #carpet-sprite-orange {
   background-position: -825px -275px;
 }
 
-/* line 243, ../../compass/sass/style.scss */
+/* line 280, ../../compass/sass/style.scss */
 #carpet-sprite-medGray {
   background-position: -1015px -275px;
 }
 
-/* line 247, ../../compass/sass/style.scss */
+/* line 284, ../../compass/sass/style.scss */
 #carpet-sprite-dkGray {
   background-position: -1200px -275px;
 }
 
-/* line 251, ../../compass/sass/style.scss */
+/* line 288, ../../compass/sass/style.scss */
 #carpet-sprite-cream {
   background-position: -30px -435px;
 }
 
-/* line 255, ../../compass/sass/style.scss */
+/* line 292, ../../compass/sass/style.scss */
 #carpet-sprite-black {
   background-position: -230px -435px;
 }
 
-/* line 259, ../../compass/sass/style.scss */
+/* line 296, ../../compass/sass/style.scss */
 #carpet-sprite-brown {
   background-position: -430px -435px;
 }
 
-/* line 263, ../../compass/sass/style.scss */
+/* line 300, ../../compass/sass/style.scss */
 #carpet-sprite-mocha {
   background-position: -630px -435px;
 }
 
-/* line 268, ../../compass/sass/style.scss */
+/* line 305, ../../compass/sass/style.scss */
 #embroidery-sprite {
   height: 150px;
   width: 150px;
@@ -273,17 +309,195 @@
   background-size: 350px 350px;
 }
 
-/* line 278, ../../compass/sass/style.scss */
+/* line 315, ../../compass/sass/style.scss */
+.thread-label {
+  margin-right: 25px;
+  border: 1px solid;
+  border-radius: 5px;
+  padding: 3px;
+}
+
+/* line 322, ../../compass/sass/style.scss */
+#thread-sprite-beige {
+  background-position: -45px -125px;
+}
+
+/* line 326, ../../compass/sass/style.scss */
+#thread-sprite-black {
+  background-position: -230px -125px;
+}
+
+/* line 330, ../../compass/sass/style.scss */
+#thread-sprite-ltBrown {
+  background-position: -430px -125px;
+}
+
+/* line 334, ../../compass/sass/style.scss */
+#thread-sprite-khaki {
+  background-position: -625px -125px;
+}
+
+/* line 338, ../../compass/sass/style.scss */
+#thread-sprite-dkBrown {
+  background-position: -823px -125px;
+}
+
+/* line 342, ../../compass/sass/style.scss */
+#thread-sprite-ltBlue {
+  background-position: -1015px -125px;
+}
+
+/* line 346, ../../compass/sass/style.scss */
+#thread-sprite-royalBlue {
+  background-position: -1217px -125px;
+}
+
+/* line 350, ../../compass/sass/style.scss */
+#thread-sprite-navyBlue {
+  background-position: -75px -290px;
+}
+
+/* line 354, ../../compass/sass/style.scss */
+#thread-sprite-yellow {
+  background-position: -230px -290px;
+}
+
+/* line 358, ../../compass/sass/style.scss */
+#thread-sprite-gold {
+  background-position: -430px -290px;
+}
+
+/* line 362, ../../compass/sass/style.scss */
+#thread-sprite-ltGold {
+  background-position: -630px -290px;
+}
+
+/* line 366, ../../compass/sass/style.scss */
+#thread-sprite-orange {
+  background-position: -825px -290px;
+}
+
+/* line 370, ../../compass/sass/style.scss */
+#thread-sprite-ltGreen {
+  background-position: -1015px -290px;
+}
+
+/* line 374, ../../compass/sass/style.scss */
+#thread-sprite-dkGreen {
+  background-position: -1200px -290px;
+}
+
+/* line 378, ../../compass/sass/style.scss */
+#thread-sprite-ltPink {
+  background-position: -45px -450px;
+}
+
+/* line 382, ../../compass/sass/style.scss */
+#thread-sprite-pink {
+  background-position: -230px -450px;
+}
+
+/* line 386, ../../compass/sass/style.scss */
+#thread-sprite-hotPink {
+  background-position: -430px -450px;
+}
+
+/* line 390, ../../compass/sass/style.scss */
+#thread-sprite-medBlue {
+  background-position: -630px -450px;
+}
+
+/* line 394, ../../compass/sass/style.scss */
+#thread-sprite-medBrown {
+  background-position: -830px -450px;
+}
+
+/* line 398, ../../compass/sass/style.scss */
+#thread-sprite-tourquoise {
+  background-position: -1030px -450px;
+}
+
+/* line 402, ../../compass/sass/style.scss */
+#thread-sprite-kellyGreen {
+  background-position: -1230px -450px;
+}
+
+/* line 406, ../../compass/sass/style.scss */
+#thread-sprite-limeGreen {
+  background-position: -45px -625px;
+}
+
+/* line 410, ../../compass/sass/style.scss */
+#thread-sprite-teal {
+  background-position: -245px -625px;
+}
+
+/* line 414, ../../compass/sass/style.scss */
+#thread-sprite-brickRed {
+  background-position: -445px -625px;
+}
+
+/* line 418, ../../compass/sass/style.scss */
+#thread-sprite-burgundy {
+  background-position: -645px -625px;
+}
+
+/* line 422, ../../compass/sass/style.scss */
+#thread-sprite-purple {
+  background-position: -845px -625px;
+}
+
+/* line 426, ../../compass/sass/style.scss */
+#thread-sprite-ltPurple {
+  background-position: -1045px -625px;
+}
+
+/* line 430, ../../compass/sass/style.scss */
+#thread-sprite-dkPurple {
+  background-position: -1245px -625px;
+}
+
+/* line 434, ../../compass/sass/style.scss */
+#thread-sprite-silver {
+  background-position: -45px -775px;
+}
+
+/* line 438, ../../compass/sass/style.scss */
+#thread-sprite-ltSilver {
+  background-position: -245px -775px;
+}
+
+/* line 442, ../../compass/sass/style.scss */
+#thread-sprite-dkGray {
+  background-position: -445px -775px;
+}
+
+/* line 446, ../../compass/sass/style.scss */
+#thread-sprite-cream {
+  background-position: -645px -775px;
+}
+
+/* line 450, ../../compass/sass/style.scss */
+#thread-sprite-white {
+  background-position: -845px -775px;
+}
+
+/* line 454, ../../compass/sass/style.scss */
+#thread-sprite-brightRed {
+  background-position: -1045px -775px;
+}
+
+/* line 460, ../../compass/sass/style.scss */
 #select-mats-body {
   border: 1px solid;
 }
 
-/* line 282, ../../compass/sass/style.scss */
+/* line 464, ../../compass/sass/style.scss */
 .mat-count {
   display: block;
 }
 
-/* line 286, ../../compass/sass/style.scss */
+/* line 468, ../../compass/sass/style.scss */
 .mat-body-box {
   display: inline-block;
   margin-left: 25px;
@@ -291,12 +505,12 @@
   height: 100%;
 }
 
-/* line 294, ../../compass/sass/style.scss */
+/* line 476, ../../compass/sass/style.scss */
 .mat-set-price {
   vertical-align: bottom;
 }
 
-/* line 298, ../../compass/sass/style.scss */
+/* line 480, ../../compass/sass/style.scss */
 #carpet-color-chart {
   background: url("/images/Embroidery_Colors.jpg");
   background-size: 500px 700px;
@@ -305,14 +519,24 @@
   background-repeat: no-repeat;
 }
 
-/* line 305, ../../compass/sass/style.scss */
+/* line 487, ../../compass/sass/style.scss */
 .option-image {
   max-width: 400px;
   margin: 5px;
   border: 1px solid;
 }
 
-/* line 328, ../../compass/sass/style.scss */
+/* line 494, ../../compass/sass/style.scss */
+#carpet-sprite-hgreen {
+  cursor: pointer;
+}
+
+/* line 498, ../../compass/sass/style.scss */
+.sprite-image {
+  cursor: pointer;
+}
+
+/* line 516, ../../compass/sass/style.scss */
 #footer {
   clear: both;
 }

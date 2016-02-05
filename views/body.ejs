@@ -1,9 +1,9 @@
 
-	<div id="banner-wrapper">
-		<div id="banner">
-			<img src="/images/galant-highway-banner.jpg">
-		</div>
+<div id="banner-wrapper">
+	<div id="banner">
+		<img src="/images/galant-highway-banner.jpg">
 	</div>
+</div>
 
 
 <div id="content-body" class="center-wrapper">
@@ -107,12 +107,54 @@
 			</div>
 			<div class="select-title">
 				<h2>4. Select Embroidery Color</h2>
+				<div>
+					<div id="button-box">
+						<form>
+							<label class="thread-label"><input type="radio" name="thread" class="thread-button" value="galant" id="galant"> Galant</label>
+							<label class="thread-label"><input type="radio" name="thread" class="thread-button" value="background" id="Background"> VR4 Background</label>
+							<label class="thread-label"><input type="radio" name="thread" class="thread-button" value="vr4" id="VR4"> VR4 Text</label>
+						</form>						
+					</div>
+				</div>
 			</div>
 			<div id="select-embroidery-color" class="select-inner">
 				<div class="">
-					<div id="embroidery-color">
-						<img class="option-image" src="/images/Embroidery_Colors.jpg" alt="Embroidery Colors">
-					</div>
+					<ul class="sprite-list-thread">
+						<li class="sprite-image" ng-click="setThreadColor('Beige')" id="thread-sprite-beige"></li>
+						<li class="sprite-image" ng-click="setThreadColor('Black')" id="thread-sprite-black"></li>
+						<li class="sprite-image" ng-click="setThreadColor('Light Brown')" id="thread-sprite-ltBrown"></li>
+						<li class="sprite-image" ng-click="setThreadColor('Khaki')" id="thread-sprite-khaki"></li>
+						<li class="sprite-image" ng-click="setThreadColor('Dark Brown')" id="thread-sprite-dkBrown"></li>
+						<li class="sprite-image" ng-click="setThreadColor('Light Blue')" id="thread-sprite-ltBlue"></li>
+						<li class="sprite-image" ng-click="setThreadColor('Royal Blue')" id="thread-sprite-royalBlue"></li>
+						<li class="sprite-image" ng-click="setThreadColor('Navy Blue')" id="thread-sprite-navyBlue"></li>
+						<li class="sprite-image" ng-click="setThreadColor('Yellow')" id="thread-sprite-yellow"></li>
+						<li class="sprite-image" ng-click="setThreadColor('Gold')" id="thread-sprite-gold"></li>
+						<li class="sprite-image" ng-click="setThreadColor('Light Gold')" id="thread-sprite-ltGold"></li>
+						<li class="sprite-image" ng-click="setThreadColor('Orange')" id="thread-sprite-orange"></li>
+						<li class="sprite-image" ng-click="setThreadColor('Light Green')" id="thread-sprite-ltGreen"></li>
+						<li class="sprite-image" ng-click="setThreadColor('Dark Green')" id="thread-sprite-dkGreen"></li>
+						<li class="sprite-image" ng-click="setThreadColor('Light Pink')" id="thread-sprite-ltPink"></li>
+						<li class="sprite-image" ng-click="setThreadColor('Pink')" id="thread-sprite-pink"></li>
+						<li class="sprite-image" ng-click="setThreadColor('Hot Pink')" id="thread-sprite-hotPink"></li>
+						<li class="sprite-image" ng-click="setThreadColor('Medium Blue')" id="thread-sprite-medBlue"></li>
+						<li class="sprite-image" ng-click="setThreadColor('Medium Brown')" id="thread-sprite-medBrown"></li>
+						<li class="sprite-image" ng-click="setThreadColor('Tourquoise')" id="thread-sprite-tourquoise"></li>
+						<li class="sprite-image" ng-click="setThreadColor('Kelly Green')" id="thread-sprite-kellyGreen"></li>
+						<li class="sprite-image" ng-click="setThreadColor('Lime Green')" id="thread-sprite-limeGreen"></li>
+						<li class="sprite-image" ng-click="setThreadColor('Teal')" id="thread-sprite-teal"></li>
+						<li class="sprite-image" ng-click="setThreadColor('Brick Red')" id="thread-sprite-brickRed"></li>
+						<li class="sprite-image" ng-click="setThreadColor('Burgundy')" id="thread-sprite-burgundy"></li>
+						<li class="sprite-image" ng-click="setThreadColor('Purple')" id="thread-sprite-purple"></li>
+						<li class="sprite-image" ng-click="setThreadColor('Light Purple')" id="thread-sprite-ltPurple"></li>
+						<li class="sprite-image" ng-click="setThreadColor('Dark Purple')" id="thread-sprite-dkPurple"></li>
+						<li class="sprite-image" ng-click="setThreadColor('Silver')" id="thread-sprite-silver"></li>
+						<li class="sprite-image" ng-click="setThreadColor('Light Silver')" id="thread-sprite-ltSilver"></li>
+						<li class="sprite-image" ng-click="setThreadColor('Dark Gray')" id="thread-sprite-dkGray"></li>
+						<li class="sprite-image" ng-click="setThreadColor('Cream')" id="thread-sprite-cream"></li>
+						<li class="sprite-image" ng-click="setThreadColor('White')" id="thread-sprite-white"></li>
+						<li class="sprite-image" ng-click="setThreadColor('Bright Red')" id="thread-sprite-brightRed"></li>
+					</ul>
 					<label><input type="checkbox" name="thread color" value="{{color}}">{{color}}</label>
 				</div>
 			</div>
@@ -134,7 +176,6 @@
 			<div id="select-embroidery-color" class="select-inner">
 				<div class="">
 					<div id="embroidery-color">
-						<img class="option-image" src="/images/Embroidery_Colors.jpg" alt="Embroidery Colors">
 					</div>
 					<label><input type="checkbox" name="thread color" value="{{color}}">{{color}}</label>
 				</div>
@@ -159,29 +200,42 @@
 
 
 <div id="sticky-order-info-wrapper" class="container">
-	<div id="order-info-header"></div>
-	<div id="order-detail-wrapper" class="unstuck">
-		<div>
+	<div id="order-info-header">
+		<div id="order-detail-wrapper" class="unstuck">
 			<div>
 				<div>
-					<h3 style="text-align: center;">Build Your Mats</h3>
-					<div></div>
+					<div>
+						<h4 style="text-align: center;">Build Your Mats</h4>
+						<div></div>
+					</div>
 				</div>
-			</div>
-			<div class="option">
-				<h3>Mat Option {{baseMatOption}}</h3>
-			</div>
-			<div class="option">
-				<h3>Carpet Color <span>{{colorIs}}</span><span style="color:{{matColor}}">{{matColor}}</span></h3><div class="{{matColor}}"></div>
-			</div>
-			<div class="option">
-				<h3>Style Option {{styleIs}}{{optionStyle}}{{styleCost}}</h3>
-			</div>
-			
-			<div id="total" class="option">
-				<h3>Total {{totalCost}}</h3>
-			</div>
-		</div>									
+				<div class="option">
+					<h4>Mat Option {{baseMatOption}}</h4>
+				</div>
+				<div class="option">
+					<h4>Carpet Color <span>{{colorIs}}</span><span style="color:{{matColor}}">{{matColor}}</span></h4><div class="{{matColor}}"></div>
+				</div>
+				<div class="option">
+					<h4>Style Option {{styleIs}}{{optionStyle}}{{styleCost}}</h4>
+				</div>
+				<div class="option">
+					<h4>Galant Embroidery Color {{threadColor}}</h4>
+				</div>
+				<div class="option">
+					<h4>VR4 Background Color {{threadColor}}</h4>
+				</div>
+				<div class="option">
+					<h4>VR4 Text Color {{threadColor}}</h4>
+				</div>
+				<div class="option">
+					<h4>Shipping {{priceShip}}</h4>
+				</div>
+				
+				<div id="total" class="option">
+					<h4>Total {{totalCost}}</h4>
+				</div>
+			</div>									
+		</div>
 	</div>
 </div>
 
@@ -199,28 +253,28 @@
 
 
 <script type="text/javascript">
-	function moveScroller() {
-		var move = function() {
-			var st = $(window).scrollTop();
-			var ot = $("#order-info-header").offset().top;
-			var s = $("#order-detail-wrapper");
-			if(st > ot) {
-				s.css({
-					position: "fixed",
-					top: "0px"
-				});
-			} else {
-				if(st <= ot) {
-					s.css({
-						position: "relative",
-						top: ""
-					});
-				}
-			}
-		};
-		$(window).scroll(move);
-		move();
-	}
+	// function moveScroller() {
+	// 	var move = function() {
+	// 		var st = $(window).scrollTop();
+	// 		var ot = $("#order-info-header").offset().top;
+	// 		var s = $("#sticky-order-info-wrapper");
+	// 		if(st > ot) {
+	// 			s.css({
+	// 				position: "fixed",
+	// 				top: "0px"
+	// 			});
+	// 		} else {
+	// 			if(st <= ot) {
+	// 				s.css({
+	// 					position: "relative",
+	// 					top: ""
+	// 				});
+	// 			}
+	// 		}
+	// 	};
+	// 	$(window).scroll(move);
+	// 	move();
+	// }
 </script>
 
 

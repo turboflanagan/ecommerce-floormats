@@ -4,8 +4,8 @@ $(document).ready(function(){
 function moveScroller() {
     var move = function() {
         var scrollTop = $(window).scrollTop();
-        var offsetTop = $("#order-info-header").offset().top;
-        var detailWrapper = $("#order-detail-wrapper");
+        var offsetTop = $("#sticky-order-info-wrapper").offset().top;
+        var detailWrapper = $("#order-info-header");
         if(scrollTop > offsetTop) {
             detailWrapper.removeClass('unstuck').addClass('fixed');
         } else {
