@@ -78,20 +78,23 @@ myApp.controller('myController', function($scope, $http){
 	};
 
 	$scope.setActive = function(){
+		$(".carpet-sprite").click(function(){
+			if($(this).hasClass('active')){
+				$(".carpet-sprite").removeClass('active');
+			}else{
+				$(this).addClass("active");
+			}
 
-		$('this').css("border", "2px solid yellow");
+		})
 		console.log("setting active");
 	};
 
+		
+	
 
 
 
 }); 
-
-
-
-
-
 
 
 
