@@ -78,11 +78,11 @@ myApp.controller('myController', function($scope, $http){
 	};
 
 
-	$scope.bindThreadColor = function(galant, badge, vr4){
-		if(#galant-button){
+	// $scope.bindThreadColor = function(galant, badge, vr4){
+	// 	if(#galant-button){
 			
-		}
-	}
+	// 	}
+	// }
 
 
 	// $scope.setActive = function(){

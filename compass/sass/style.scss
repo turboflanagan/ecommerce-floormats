@@ -9,6 +9,9 @@
 	font-size: 14px;
 }
 
+#nav-wrapper {
+	background: #232F3E;
+}
 
 #nav-bar ul{
 	background-color: #232F3E;
@@ -95,6 +98,8 @@
 // **************** BANNER STYLING *****************
 #banner-wrapper {
 	border-bottom: 7px solid #232F3E;
+	background: #232F3E;
+
 }
 
 #banner {
@@ -181,16 +186,28 @@
 	float: left;
 }
 
-#options-wrapper-style {
-
+.heading-title{
+	margin-left: 10%;
+}
+#options-wrapper-car-number {
+	margin: 70px 0;
+}
+#car-number-title {
+	margin: 10px;
+}
+#car-number-input {
+	margin: 0 10px 10px 20px;
 }
 .select-inner {
 	border: 1px solid;
 	border-radius: 4px;
 }
 
+#embroidery-title {
+	margin-right: 35px;
+}
 #button-box {
-	text-align: center;
+	// text-align: center;
 }
 
 .button {
@@ -494,6 +511,9 @@
 	border: 1px solid;
 }
 
+#total {
+	background-color: black;
+}
 
 .carpet-sprite {
 	cursor: pointer;
