@@ -77,17 +77,25 @@ myApp.controller('myController', function($scope, $http){
 		}
 	};
 
-	$scope.setActive = function(){
-		$(".carpet-sprite").click(function(){
-			if($(this).hasClass('active')){
-				$(".carpet-sprite").removeClass('active');
-			}else{
-				$(this).addClass("active");
-			}
 
-		})
-		console.log("setting active");
-	};
+	$scope.bindThreadColor = function(galant, badge, vr4){
+		if(#galant-button){
+			
+		}
+	}
+
+
+	// $scope.setActive = function(){
+	// 	$(".carpet-sprite").click(function(){
+	// 		if($(this).hasClass('active')){
+	// 			$(".carpet-sprite").removeClass('active');
+	// 		}else{
+	// 			$(this).addClass("active");
+	// 		}
+
+	// 	})
+	// 	console.log("setting active");
+	// };
 
 		
 	

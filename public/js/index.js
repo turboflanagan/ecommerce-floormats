@@ -20,10 +20,12 @@ function moveScroller() {
 
 moveScroller();
 
-$("a").click(function(event){
-    // console.log($(this));
-    event.preventDefault();
-});
+
+// unneeded code because I removed the a tags from the sprite
+// $("a").click(function(event){
+//     // console.log($(this));
+//     event.preventDefault();
+// });
 
 
 });

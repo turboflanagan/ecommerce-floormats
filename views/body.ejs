@@ -109,10 +109,17 @@
 				<h2>4. Select Embroidery Color</h2>
 				<div>
 					<div id="button-box">
+
+						<!-- example for buttons
+						<ul ng-init="selectedTab = 'users'">
+						   <li ng-class="{'active':selectedTab === 'users'}" ng-click="selectedTab = 'users'"><a href="#users" >Users</a></li>
+						   <li ng-class="{'active':selectedTab === 'items'}" ng-click="selectedTab = 'items'"><a href="#items" >Items</a></li>
+						</ul> -->
+
 						<form>
-							<label class="thread-label"><input type="radio" name="thread" class="thread-button" value="galant" id="galant"> Galant</label>
-							<label class="thread-label"><input type="radio" name="thread" class="thread-button" value="background" id="Background"> VR4 Background</label>
-							<label class="thread-label"><input type="radio" name="thread" class="thread-button" value="vr4" id="VR4"> VR4 Text</label>
+							<label id="galant-button" class="thread-label"><input type="radio" name="thread" class="thread-button" value="galant" id="galant"> Galant</label>
+							<label id="vr4-button" class="thread-label"><input type="radio" name="thread" class="thread-button" value="background" id="Background"> VR4 Background</label>
+							<label id="vr4-text-button" class="thread-label"><input type="radio" name="thread" class="thread-button" value="vr4" id="VR4"> VR4 Text</label>
 						</form>						
 					</div>
 				</div>
