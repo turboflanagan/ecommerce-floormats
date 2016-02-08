@@ -9,7 +9,4 @@ $(document).ready(function(){
 		$(".option-image").removeClass('active');
 		$(this).addClass("active");
 	})
-	console.log("setting active");
-
-
 });

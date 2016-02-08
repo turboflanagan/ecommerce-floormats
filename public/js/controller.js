@@ -19,21 +19,52 @@ myApp.controller('myController', function($scope, $http){
 			$scope.matFour = true;
 			$scope.baseMatOption = "is 4pc set = $" + $scope.price4;
 			$scope.priceShip = "$" + shipping;
-			calcTotal($scope.price4, shipping, null, null);
+			calcTotal($scope.price4, shipping, $scope.priceEmbroiderFront, null);
 			$(this).css("border", "3px solid yellow");
 		}else if(numMats == 2){
 			$scope.matFour = false;
 			$scope.matTwo = true;
 			$scope.baseMatOption = "is 2pc set = $" + $scope.price2;
 			$scope.priceShip = "$" + shipping;
-			calcTotal($scope.price2, shipping, null, null);
+			calcTotal($scope.price2, shipping, $scope.priceEmbroiderFront, null);
 			
 		}else{
 			$scope.baseMatOption = "";
 			$scope.priceShip = "";
 
 		};
-		calcTotal();
+	};
+
+	function calcTotal(matCost, shipping, priceEmbroiderFront, priceEmbroiderRear){
+		//Get matCost
+		$scope.matCost = 0;
+		if($scope.matTwo){
+			$scope.matCost = $scope.price2 + shipping + priceEmbroiderFront;
+			$scope.totalCost = $scope.matCost;
+
+
+
+
+
+
+
+
+
+
+
+			console.log("*********totalCost************");
+			console.log($scope.totalCost);
+
+			console.log("********** shipping *************");
+			console.log(shipping);
+
+			console.log("********* priceEmbroiderFront **********");
+			console.log(priceEmbroiderFront);
+
+			console.log("*********** matCost *************");
+			console.log(matCost);
+
+		}
 	};
 
 	// $scope.addColor = function(setMatColor){
@@ -68,7 +99,6 @@ myApp.controller('myController', function($scope, $http){
 	$scope.setStyle = function(style){
 		$scope.optionStyle = is + style;
 		$scope.styleCost = " $" + $scope.priceEmbroiderFront;
-		calcTotal();		
 	};
 
 	$scope.addCarNumber = function(){
@@ -81,22 +111,7 @@ myApp.controller('myController', function($scope, $http){
 	}
 
 
-	function calcTotal(matCost, shipping, priceEmbroiderFront, priceEmbroiderRear){
-		//Get matCost
-		var matCost = 0;
-		if($scope.matTwo){
-			matCost = $scope.price2 + shipping + priceEmbroiderFront + priceEmbroiderRear;
-			$scope.totalCost = matCost;
-			console.log($scope.totalCost);
-		// 	matCost = $scope.price2;
-		// 	$scope.totalCost = matCost + 
-		// }else if($scope.matFour){
-		// 	matCost = $scope.price4;
-		// }
-
-		// $scope.totalCost = matCost + $scope.priceEmbroiderFront + $scope.priceEmbroiderRear + $scope.priceShip;
-		}
-	};
+	
 
 
 	// $scope.bindThreadColor = function(galant, badge, vr4){
