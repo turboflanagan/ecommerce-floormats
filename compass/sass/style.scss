@@ -128,8 +128,11 @@
     overflow: hidden;
     display: block;
     height: 500px;	
+}
 
-    
+#content-wrapper {
+	width: 92%;
+	margin: auto;
 }
 
 #order-detail-wrapper {
@@ -138,7 +141,7 @@
 	color: #F5F5F5;
 	margin: 10px;
 	padding: 5px;
-	height: 400px;
+	height: 435px;
 	display: block;
 }
 

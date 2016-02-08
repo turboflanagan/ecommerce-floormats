@@ -70,6 +70,11 @@ myApp.controller('myController', function($scope, $http){
 	};
 
 
+	$scope.setCarNumber = function(carNum){
+		event.preventDefault();
+		$scope.carNumber = carNum;
+	};
+
 
 	function calcTotal(matCost, shipping, priceEmbroiderFront, priceEmbroiderRear){
 		//Get matCost

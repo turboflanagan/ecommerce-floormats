@@ -99,18 +99,26 @@
 		</div>
 	</div>
 
+	
+
+
 	<div id="options-wrapper-car-number">
 		<div class="select-wrapper">
 			<div class="heading-title">
 				<h1>Car Number for Rear Mats</h1>
 			</div>
-			<form action="" method="post" accept-charset="utf-8" class="select-inner">
+			<form ng-submit="setCarNumber()" action="" method="" accept-charset="utf-8" class="select-inner">
 				<div id="car-number-title"><h3>Enter your car number here</h3></div>
-				<input type="text" name="car number" value="" placeholder="100/1000" id="car-number-input">
-				<label><input type="checkbox" name="rear mat number" value="">None</label>
+				<input type="text" name="car number" value="" placeholder="100/1000" ng-model="carNumber" id="car-number-input" />
+				<label><input type="checkbox" name="rear mat number" value="" />None</label>
+				<input type="submit" value="add" />
 			</form>	
 		</div>
 	</div>
+
+	
+
+
 
 	<div id="options-wrapper-embroidery-color">
 		<div class="select-wrapper">
@@ -207,7 +215,7 @@
 <div id="sticky-order-info-wrapper" class="container">
 	<div id="order-info-header">
 		<div id="order-detail-wrapper" class="unstuck">
-			<div>
+			<div id="content-wrapper">
 				<div>
 					<div>
 						<h4 style="text-align: center;">Build Your Mats</h4>
@@ -231,6 +239,9 @@
 				</div>
 				<div class="option">
 					<h4>VR4 Text Color {{vr4ThreadColor}}</h4>
+				</div>
+				<div class="option">
+					<h4>Car Number {{carNumber}}</h4>
 				</div>
 				<div class="option">
 					<h4>Shipping {{priceShip}}</h4>
