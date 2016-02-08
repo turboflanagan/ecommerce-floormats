@@ -47,7 +47,20 @@ myApp.controller('myController', function($scope, $http){
 	};
 
 	$scope.setThreadColor = function(threadColor){
+		$scope.messageThreadColor = "";
+		if($scope.thread == "galant"){
+			$scope.galantThreadColor = is + threadColor;
+		}else if($scope.thread == "background"){
+			$scope.backgroundThreadColor = is + threadColor;
+		}else if($scope.thread == "vr4"){
+			$scope.vr4ThreadColor = is + threadColor;
+		}else{
+			$scope.messageThreadColor = "Please select a button to apply your embroidery color.";
+		}
+
 		$scope.threadColor = is + threadColor;
+
+		console.log($scope.thread);
 	};
 
 	$scope.setStyle = function(style){
@@ -56,9 +69,7 @@ myApp.controller('myController', function($scope, $http){
 		calcTotal();		
 	};
 
-	// $scope.calcTotal = function(){
-	// 	$scope.totalCost = "$" + $scope.baseMatOption+$scope.priceEmbroiderFront;
-	// }
+
 
 	function calcTotal(matCost, shipping, priceEmbroiderFront, priceEmbroiderRear){
 		//Get matCost
@@ -85,17 +96,6 @@ myApp.controller('myController', function($scope, $http){
 	// }
 
 
-	// $scope.setActive = function(){
-	// 	$(".carpet-sprite").click(function(){
-	// 		if($(this).hasClass('active')){
-	// 			$(".carpet-sprite").removeClass('active');
-	// 		}else{
-	// 			$(this).addClass("active");
-	// 		}
-
-	// 	})
-	// 	console.log("setting active");
-	// };
 
 		
 	

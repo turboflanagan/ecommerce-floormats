@@ -129,12 +129,17 @@
 
 						<form>
 							<label id="embroidery-title"><h3>4. Select Embroidery Color for each:</h3></label>
-							<label id="galant-button" class="thread-label"><input type="radio" name="thread" class="thread-button" value="galant" id="galant"> Galant</label>
-							<label id="vr4-button" class="thread-label"><input type="radio" name="thread" class="thread-button" value="background" id="Background"> VR4 Background</label>
-							<label id="vr4-text-button" class="thread-label"><input type="radio" name="thread" class="thread-button" value="vr4" id="VR4"> VR4 Text</label>
+							<label id="galant-button" class="thread-label"><input type="radio" name="thread" ng-model="thread" class="thread-button" value="galant" id="galant"> Galant</label>
+
+							<label id="vr4-button" class="thread-label"><input type="radio" name="thread" ng-model="thread" class="thread-button" value="background" id="Background"> VR4 Background</label>
+
+							<label id="vr4-text-button" class="thread-label"><input type="radio" name="thread" ng-model="thread" class="thread-button" value="vr4" id="VR4"> VR4 Text</label>
 						</form>						
 					</div>
 				</div>
+			</div>
+			<div id="embroidery-error-message">
+				{{messageThreadColor}}
 			</div>
 			<div id="select-embroidery-color" class="select-inner">
 				<div class="">
@@ -219,13 +224,13 @@
 					<h4>Style Option {{styleIs}}{{optionStyle}}{{styleCost}}</h4>
 				</div>
 				<div class="option">
-					<h4>Galant Embroidery Color {{threadColor}}</h4>
+					<h4>Galant Embroidery Color {{galantThreadColor}}</h4>
 				</div>
 				<div class="option">
-					<h4>VR4 Background Color {{threadColor}}</h4>
+					<h4>VR4 Background Color {{backgroundThreadColor}}</h4>
 				</div>
 				<div class="option">
-					<h4>VR4 Text Color {{threadColor}}</h4>
+					<h4>VR4 Text Color {{vr4ThreadColor}}</h4>
 				</div>
 				<div class="option">
 					<h4>Shipping {{priceShip}}</h4>

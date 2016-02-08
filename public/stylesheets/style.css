@@ -584,7 +584,20 @@
   cursor: pointer;
 }
 
-/* line 550, ../../compass/sass/style.scss */
+/* line 537, ../../compass/sass/style.scss */
+#embroidery-error-message {
+  text-align: center;
+  background-color: red;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 7px;
+  color: white;
+  width: 60%;
+  margin: 0 auto 10px;
+  padding: 4 20px;
+}
+
+/* line 561, ../../compass/sass/style.scss */
 #footer {
   clear: both;
 }
