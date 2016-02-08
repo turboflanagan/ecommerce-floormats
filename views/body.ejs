@@ -93,7 +93,6 @@
 						<img ng-click="setStyle('Galant #3')" class="option-image" src="/images/GalantMat_3.jpg" alt="Embroidery Style">
 						<img ng-click="setStyle('Galant #4')" class="option-image" src="/images/GalantMat_4.jpg" alt="Embroidery Style">
 					</div>
-					<label><input type="checkbox" name="embroidery style" value="{{style}}">{{style}}</label>
 				</div>
 			</div>
 		</div>
@@ -107,10 +106,10 @@
 			<div class="heading-title">
 				<h1>Car Number for Rear Mats</h1>
 			</div>
-			<form ng-submit="setCarNumber()" action="" method="" accept-charset="utf-8" class="select-inner">
+			<form ng-submit="addCarNumber()" action="" method="" accept-charset="utf-8" class="select-inner">
 				<div id="car-number-title"><h3>Enter your car number here</h3></div>
 				<input type="text" name="car number" value="" placeholder="100/1000" ng-model="carNumber" id="car-number-input" />
-				<label><input type="checkbox" name="rear mat number" value="" />None</label>
+				<label><input type="checkbox" name="rear-mat-number" ng-model="carNumberNone" value="" />None</label>
 				<input type="submit" value="add" />
 			</form>	
 		</div>
@@ -137,11 +136,15 @@
 
 						<form>
 							<label id="embroidery-title"><h3>4. Select Embroidery Color for each:</h3></label>
+							<div id="embroidery-buttons">
 							<label id="galant-button" class="thread-label"><input type="radio" name="thread" ng-model="thread" class="thread-button" value="galant" id="galant"> Galant</label>
 
 							<label id="vr4-button" class="thread-label"><input type="radio" name="thread" ng-model="thread" class="thread-button" value="background" id="Background"> VR4 Background</label>
 
 							<label id="vr4-text-button" class="thread-label"><input type="radio" name="thread" ng-model="thread" class="thread-button" value="vr4" id="VR4"> VR4 Text</label>
+
+							<label id="car-number-button" class="thread-label"><input type="radio" name="thread" ng-model="thread" class="thread-button" value="carNumber" id="carNumber"> Car Number Color</label>
+							</div>
 						</form>						
 					</div>
 				</div>
@@ -241,7 +244,10 @@
 					<h4>VR4 Text Color {{vr4ThreadColor}}</h4>
 				</div>
 				<div class="option">
-					<h4>Car Number {{carNumber}}</h4>
+					<h4>Car Number {{addedCarNumber}}</h4>
+				</div>
+				<div class="option">
+					<h4>Car Number Color {{carNumberThreadColor}}</h4>
 				</div>
 				<div class="option">
 					<h4>Shipping {{priceShip}}</h4>
@@ -250,7 +256,8 @@
 				<div id="total" class="option">
 					<h4>Total {{totalCost}}</h4>
 				</div>
-			</div>									
+				<button type="submit" id="order-button">Submit Order</button>								
+			</div>	
 		</div>
 	</div>
 </div>

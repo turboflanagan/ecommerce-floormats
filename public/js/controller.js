@@ -54,6 +54,8 @@ myApp.controller('myController', function($scope, $http){
 			$scope.backgroundThreadColor = is + threadColor;
 		}else if($scope.thread == "vr4"){
 			$scope.vr4ThreadColor = is + threadColor;
+		}else if($scope.thread == "carNumber"){
+			$scope.carNumberThreadColor = is + threadColor;
 		}else{
 			$scope.messageThreadColor = "Please select a button to apply your embroidery color.";
 		}
@@ -69,11 +71,14 @@ myApp.controller('myController', function($scope, $http){
 		calcTotal();		
 	};
 
-
-	$scope.setCarNumber = function(carNum){
+	$scope.addCarNumber = function(){
+		if($scope.carNumberNone){
+			$scope.addedCarNumber = 'None';
+		}else{
+			$scope.addedCarNumber = $scope.carNumber;
+		}
 		event.preventDefault();
-		$scope.carNumber = carNum;
-	};
+	}
 
 
 	function calcTotal(matCost, shipping, priceEmbroiderFront, priceEmbroiderRear){
