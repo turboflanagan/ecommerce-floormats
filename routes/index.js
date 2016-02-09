@@ -1,5 +1,6 @@
 var express = require('express');
 var router = express.Router();
+var Order = require('../models/order');
 
 /************************ GET home page route ************************/
 /* . */
@@ -51,18 +52,19 @@ router.get('/thank-you', function (req, res, next){
 
 
 router.get('/delivery', function (req, res, next) {
-    if(req.session.username){
+    // if(req.session.username){
         //They do belong here. Proceed with the page.
         // Check to see if they have prefs set already.
-        Account.findOne(
-            { username: req.session.username }
-        ),
+        // Account.findOne(
+        //     { username: req.session.username }
+        // ),
         // Render the choices view
-        res.render('delivery', { username: req.session.username, menuItem: 'delivery' });
+        res.render('delivery');
+        console.log("i'm in...");
         
-    }else{
-        res.redirect('/');
-    }
+    // }else{
+    //     res.redirect('/');
+    // }
 });
 
 router.post('/delivery', function (req, res, next) {

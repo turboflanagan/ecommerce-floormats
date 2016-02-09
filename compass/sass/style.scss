@@ -193,7 +193,8 @@ html, body, #container {
 	height: 100%; 
 }
 body > #container {
-	height: auto; min-height: 100%; 
+	height: auto; 
+	min-height: 100%; 
 }
 
 #content-body {
@@ -592,7 +593,7 @@ body > #container {
     position: relative;
     z-index: 10;
     height: 3em;
-    margin-top: -3em;
+    margin-top: 0em;
 }
 
 
