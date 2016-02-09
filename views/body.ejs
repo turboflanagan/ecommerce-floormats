@@ -22,7 +22,7 @@
 					</div>
 					<label><input ng-model="matFour" ng-change="matFour ? selectMat(4) : selectMat(0)" type="checkbox" name="4mats" value="4 pc">4 Pc Mat Set</label>
 					<div class="mat-set-price">
-						<!-- Angular Price Here --><h1>$85</h1>
+						<!-- Angular Price Here --><h1>${{price4}}</h1>
 					</div>
 				</div>
 				<div class="mat-body-box">
@@ -31,7 +31,7 @@
 					</div>
 					<label><input ng-model="matTwo" ng-change="matTwo ? selectMat(2) : selectMat(0)" type="checkbox" name="2mats" value="2 pc">2 Pc Mat Set</label>
 					<div class="mat-set-price">
-					<!-- Angular Price Here --><h1>$65</h1>
+					<!-- Angular Price Here --><h1>${{price2}}</h1>
 					</div>
 				</div>
 			</div>
@@ -243,7 +243,7 @@
 					<h4>VR4 Text Color {{vr4ThreadColor}}</h4>
 				</div>
 				<div class="option">
-					<h4>Car Number {{addedCarNumber}}</h4>
+					<h4>Car Number {{addedCarNumber}} - ${{priceEmbroiderRear}} </h4>
 				</div>
 				<div class="option">
 					<h4>Car Number Color {{carNumberThreadColor}}</h4>
@@ -255,7 +255,17 @@
 				<div id="total" class="option">
 					<h4>Total {{totalCost}}</h4>
 				</div>
-				<button type="submit" id="order-button">Submit Order</button>								
+				<form action="/payment" method="POST" id="order-button">
+					<script
+						src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+						data-key="pk_test_Ek4iAnVtZLKBd1aApY3rd6po"
+						data-amount=""
+						data-name="TurboFloormats.com"
+						data-description="VR4 Floormat Set"
+						data-image="/128x128.png"
+						data-locale="auto">
+					</script>
+				</form>								
 			</div>	
 		</div>
 	</div>
