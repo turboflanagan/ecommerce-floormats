@@ -162,9 +162,20 @@
    	margin-left: auto;
 }
 
+.pricing {
+	float: right;
+	text-align: center;
+	margin-right: 10px;
+	font-size: 17px;
+}
+
 .option {
 	border: 1px solid;
-
+	padding: 8px;
+	& h4 {
+		margin-left: 10px;
+		display: inline;
+	}
 }
 
 #order-button {

@@ -225,13 +225,13 @@
 					</div>
 				</div>
 				<div class="option">
-					<h4>Mat Option {{baseMatOption}}</h4>
+					<h4>Mat Option {{baseMatOption}}</h4><div class="pricing">{{matPrice}}</div>
 				</div>
 				<div class="option">
-					<h4>Carpet Color <span>{{colorIs}}</span><span style="color:{{matColor}}">{{matColor}}</span></h4><div class="{{matColor}}"></div>
+					<h4>Carpet Color <span>{{colorIs}}</span><span style="color:{{matColor}}">{{matColor}}</span></h4><div class="{{matColor}}"></div><div class="pricing">{{}}</div>
 				</div>
 				<div class="option">
-					<h4>Style Option {{styleIs}}{{optionStyle}}{{styleCost}}</h4>
+					<h4>Style Option {{styleIs}}{{optionStyle}}{{}}</h4><div class="pricing">{{styleCost}}</div>
 				</div>
 				<div class="option">
 					<h4>Galant Embroidery Color {{galantThreadColor}}</h4>
@@ -243,17 +243,17 @@
 					<h4>VR4 Text Color {{vr4ThreadColor}}</h4>
 				</div>
 				<div class="option">
-					<h4>Car Number {{addedCarNumber}} - ${{priceEmbroiderRear}} </h4>
+					<h4>Car Number {{addedCarNumber}}</h4><div class="pricing">{{priceEmbroiderRear}}</div>
 				</div>
 				<div class="option">
 					<h4>Car Number Color {{carNumberThreadColor}}</h4>
 				</div>
 				<div class="option">
-					<h4>Shipping {{priceShip}}</h4>
+					<h4>Shipping </h4><div class="pricing">{{priceShip}}</div>
 				</div>
 				
 				<div id="total" class="option">
-					<h4>Total {{totalCost}}</h4>
+					<h4>Total {{totalCost}}</h4><div class="pricing">{{}}</div>
 				</div>
 				<form action="/payment" method="POST" id="order-button">
 					<script
@@ -262,9 +262,9 @@
 						data-amount=""
 						data-name="TurboFloormats.com"
 						data-description="VR4 Floormat Set"
-						data-image="/128x128.png"
 						data-locale="auto">
 					</script>
+						<!-- data-image="/128x128.png" -->
 				</form>								
 			</div>	
 		</div>

@@ -2,52 +2,68 @@ var myApp = angular.module('myApp', []);
 
 myApp.controller('myController', function($scope, $http){
 
-	$scope.price4 = 85;
-	$scope.price2 = 65;
-	$scope.priceEmbroiderFront = "";
-	$scope.priceEmbroiderRear = "";
-	$scope.priceShip;
+	$scope.price = 0;
+	$scope.matPrice = "";
+	$scope.priceEmbroiderFront = 0;
+	$scope.priceEmbroiderRear = 0;
+	$scope.priceShip = 0;
 	$scope.matColor = "";
 	$scope.totalCost = 0;
-	var shipping = 12;
+	var price4 = 85;
+	var price2 = 65;
+	var shipping = 15;
 	var is = "is: ";
-	var frontEmbroidery = 30;
-	var rearEmbroidery = 10;
+	var frontEmbroidery = 0;
+	var rearEmbroidery = 0;
 
 	$scope.selectMat = function(numMats){
 		id="select-mats-img2"
 		if(numMats == 4){
 			$scope.matTwo = false;
 			$scope.matFour = true;
-			$scope.baseMatOption = "is 4pc set = $" + $scope.price4;
-			$scope.priceShip = "$" + shipping;
-			calcTotal($scope.price4, shipping, frontEmbroidery, null);
-			$(this).css("border", "3px solid yellow");
+			$scope.baseMatOption = "is 4pc set";
+			$scope.price = price4;
+			$scope.matPrice = "$" + $scope.price;
+			calcTotal(price4);
 		}else if(numMats == 2){
 			$scope.matFour = false;
 			$scope.matTwo = true;
-			$scope.baseMatOption = "is 2pc set = $" + $scope.price2;
-			$scope.priceShip = "$" + shipping;
-			calcTotal($scope.price2, shipping, frontEmbroidery, null);
+			$scope.baseMatOption = "is 2pc set";
+			$scope.price = price2;
+			$scope.matPrice = "$" + $scope.price;
+			calcTotal(price2);
 			
 		}else{
 			$scope.baseMatOption = "";
-			$scope.priceShip = "";
+			$scope.priceShip = 0;
+			$scope.matPrice = "";
+			$scope.totalCost = 0;
 
 		};
 	};
 
-	function calcTotal(matCost, shipping, priceEmbroiderFront, priceEmbroiderRear){
-		//Get matCost
-		$scope.matCost = 0;
-		if($scope.matTwo){
-			$scope.matCost = $scope.price2 + shipping + frontEmbroidery;
-			$scope.totalCost = $scope.matCost;
-		}else if($scope.matFour){
-			$scope.matCost = $scope.price4 + shipping + frontEmbroidery + rearEmbroidery;
-			$scope.totalCost = $scope.matCost;
-		}
+	function calcTotal(cost){
+		$scope.totalCost =  $scope.price + 	$scope.priceEmbroiderFront + rearEmbroidery + shipping;
+		$scope.priceShip = "$" + shipping;
 	};
+
+
+
+
+
+
+
+
+		// //Get matCost
+		// $scope.matCost = 0;
+		// if($scope.matTwo){
+		// 	$scope.matCost = $scope.price2 + shipping;
+		// 	$scope.totalCost = $scope.matCost;
+		// }else if($scope.matFour){
+		// 	$scope.matCost = $scope.price4 + shipping;
+		// 	$scope.totalCost = $scope.matCost;
+		// }
+
 
 
 
@@ -71,23 +87,27 @@ myApp.controller('myController', function($scope, $http){
 		}
 
 		$scope.threadColor = is + threadColor;
-
-		console.log($scope.thread);
 	};
 
 	$scope.setStyle = function(style){
 		$scope.optionStyle = is + style;
+		frontEmbroidery = 25;
 		$scope.priceEmbroiderFront = frontEmbroidery;
 		$scope.styleCost = " $" + $scope.priceEmbroiderFront;
+		calcTotal(frontEmbroidery);
 	};
 
 	$scope.addCarNumber = function(){
 		if($scope.carNumberNone){
 			$scope.addedCarNumber = 'None';
-			$scope.priceEmbroiderRear = 0;
+			$scope.priceEmbroiderRear = "";
+			rearEmbroidery = 0;
+			calcTotal(rearEmbroidery);
 		}else{
 			$scope.addedCarNumber = $scope.carNumber;
-			$scope.priceEmbroiderRear = rearEmbroidery;
+			rearEmbroidery = 10;
+			$scope.priceEmbroiderRear = "$" + rearEmbroidery;
+			calcTotal(rearEmbroidery);
 		}
 		event.preventDefault();
 	}
