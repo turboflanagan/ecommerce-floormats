@@ -9,30 +9,26 @@ router.get('/', function(req, res, next) {
 });
 
 /************************ PAYMENT PAGE ROUTES ************************/
-router.get('/payment', function (req, res, next) {
-// if(req.session.username){
-    res.render('payment');
-    // }
-});
 
 router.post('/payment', function (req, res, next) {
-            res.redirect('thank-you')
-    
-    // if(req.session.username){
-    //     stripe.charges.create({
-    //       amount: 400,
-    //       currency: "usd",
-    //       source: req.body.stripeToken, // obtained with Stripe.js
-    //       description: "Charge for " + req.body.stripeEmail
-    //     }, function(err, charge) {
-    //       // asynchronously called
-    //       if(err){
-    //         res.send('You got an err.' + err)
-    //       }else{
-    //         res.redirect('thank-you')
-    //       }
-    //     });
-    // }
+            // res.redirect('thank-you')
+    console.log(req.session);
+    if(req.session){
+        stripe.charges.create({
+          amount: 400,
+          currency: "usd",
+          source: req.body.stripeToken, // obtained with Stripe.js
+          description: "Charge for " + req.body.stripeEmail
+        }, function(err, charge) {
+          // asynchronously called
+          if(err){
+            res.send('You got an err.' + err)
+          }else{
+            console.log(req.session.submitData);
+            // res.redirect('thank-you')
+          }
+        });
+    }
 });
 
 
@@ -99,6 +95,22 @@ router.post('/delivery', function (req, res, next) {
             }
         })
     }
+});
+
+
+
+/************************ CONFIRMATION PAGE ROUTES ************************/
+router.post('/confirmation', function (req, res, next) {
+    req.session.submitData = req.body;
+    console.log(req.session);
+    res.render('confirmation', { submitData: req.body });
+
+    // }
+});
+
+router.get('/confirmation', function (req, res, next) {
+    res.render('confirmation', { submitData: req.body });
+
 });
 
 

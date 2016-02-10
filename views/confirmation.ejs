@@ -1,16 +1,52 @@
 <% include head %>
 
 <body ng-controller="myController">
-	
-<header>
-</header>
-<main>
-	<% include header %>
-	<div>
-		<% include payment.html %>
-		<%= submitData.fullName %>
+	<div id="container">
+		<header>
+			<% include header %>
+		</header>
+		<main>
+			
+			<div id="order-conf-wrapper">
+				<div id="order-header">
+					<h1>Order Detail Confirmation</h1>
+				</div>
+				<div id="detail-body">
+					<div id="order-info" class="detial-box">
+						
+					</div>
+					<div id="ship-info" class="detial-box">
+						
+					</div>
+				</div>
+			</div>
+
+			<div>
+				<%= submitData.fullName %>
+				<%= submitData.address1 %>
+				<%= submitData.address2 %>
+				<%= submitData.city %>
+				<%= submitData.State %>
+				<%= submitData.zip %>
+				<%= submitData.matOption %>
+				<%= submitData.carpetColor %>
+				<%= submitData.styleOption %>
+				<%= submitData.galantEmbroideryColor %>
+				<%= submitData.vr4EmbroideryColor %>
+				<%= submitData.carNumber %>
+				<%= submitData.carNumberColor %>
+				<%= submitData.shipping %>
+				<%= submitData.totalCost %>
+
+
+
+			</div>
+
+			<div id="stripe-modal">
+				<% include payment.html %>
+			</div>
+		</main>
 	</div>
-</main>
 <footer>
 	<% include footer %>
 </footer>

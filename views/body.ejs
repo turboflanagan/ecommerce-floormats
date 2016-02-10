@@ -6,21 +6,6 @@
 </div>
 
 <% include delivery.html %>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <form action="/payment" method="POST" id="order-button">
-			<script
-				src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-				data-key="pk_test_Ek4iAnVtZLKBd1aApY3rd6po"
-				data-amount=""
-				data-name="TurboFloormats.com"
-				data-description="VR4 Floormat Set"
-				data-locale="auto">
-			</script>
-				<!-- data-image="/128x128.png" -->
-		</form>	
-      </div>
-
 
 <div id="content-body" class="center-wrapper">
 	<div id="options-wrapper">
@@ -241,28 +226,28 @@
 					</div>
 				</div>
 				<div class="option">
-					<h4>Mat Option {{baseMatOption}}</h4><div class="pricing">{{matPrice}}</div>
+					<h4>Mat Option {{matOptionMessage}}</h4><div class="pricing">{{matPrice}}</div>
 				</div>
 				<div class="option">
-					<h4>Carpet Color <span>{{colorIs}}</span><span style="color:{{matColor}}">{{matColor}}</span></h4><div class="{{matColor}}"></div><div class="pricing">{{}}</div>
+					<h4>Carpet Color <span style="color:{{matColor}}">{{setCarpetColor}}</span></h4><div class="{{matColor}}"></div>
 				</div>
 				<div class="option">
-					<h4>Style Option {{styleIs}}{{optionStyle}}{{}}</h4><div class="pricing">{{styleCost}}</div>
+					<h4>Style Option {{setOptionStyle}}</h4><div class="pricing">{{styleCost}}</div>
 				</div>
 				<div class="option">
-					<h4>Galant Embroidery Color {{galantThreadColor}}</h4>
+					<h4>Galant Embroidery Color {{setGalantThreadColor}}</h4>
 				</div>
 				<div class="option">
-					<h4>VR4 Background Color {{backgroundThreadColor}}</h4>
+					<h4>VR4 Background Color {{setBackgroundThreadColor}}</h4>
 				</div>
 				<div class="option">
-					<h4>VR4 Text Color {{vr4ThreadColor}}</h4>
+					<h4>VR4 Text Color {{setVr4ThreadColor}}</h4>
 				</div>
 				<div class="option">
 					<h4>Car Number {{addedCarNumber}}</h4><div class="pricing">{{priceEmbroiderRear}}</div>
 				</div>
 				<div class="option">
-					<h4>Car Number Color {{carNumberThreadColor}}</h4>
+					<h4>Car Number Color {{setCarNumberThreadColor}}</h4>
 				</div>
 				<div class="option">
 					<h4>Shipping </h4><div class="pricing">{{priceShip}}</div>
