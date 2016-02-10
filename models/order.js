@@ -10,7 +10,16 @@ var Order = new Schema({
 	zip: Number,
 	username: String,
 	password: String,
-	accessLevel: Number
+	accessLevel: Number,
+	matOption: String,
+	carpetColor: String,
+	styleOption: String,
+	galantEmbroideryColor: String,
+	vr4TextColor: String,
+	carNumber: String,
+	carNumberColor: String,
+	shipping: Number,
+	totalCost: Number
 });
 
 
