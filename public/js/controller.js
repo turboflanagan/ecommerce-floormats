@@ -11,7 +11,7 @@ myApp.controller('myController', function($scope, $http){
 	$scope.totalCost = 0;
 	var price4 = 85;
 	var price2 = 65;
-	var shipping = 15;
+	$scope.shipping = 15;
 	var is = "is: ";
 	var frontEmbroidery = 0;
 	var rearEmbroidery = 0;
@@ -21,19 +21,22 @@ myApp.controller('myController', function($scope, $http){
 		if(numMats == 4){
 			$scope.matTwo = false;
 			$scope.matFour = true;
-			$scope.baseMatOption = "is 4pc set";
+			$scope.matOptionMessage = "is 4pc set";
+			$scope.baseMatOption = "4pc set";
 			$scope.price = price4;
 			$scope.matPrice = "$" + $scope.price;
 			calcTotal(price4);
 		}else if(numMats == 2){
 			$scope.matFour = false;
 			$scope.matTwo = true;
-			$scope.baseMatOption = "is 2pc set";
+			$scope.matOptionMessage = "is 2pc set";
+			$scope.baseMatOption = "2pc set";
 			$scope.price = price2;
 			$scope.matPrice = "$" + $scope.price;
 			calcTotal(price2);
 			
 		}else{
+			$scope.matOptionMessage = "";
 			$scope.baseMatOption = "";
 			$scope.priceShip = 0;
 			$scope.matPrice = "";
@@ -43,54 +46,39 @@ myApp.controller('myController', function($scope, $http){
 	};
 
 	function calcTotal(cost){
-		$scope.totalCost =  $scope.price + 	$scope.priceEmbroiderFront + rearEmbroidery + shipping;
-		$scope.priceShip = "$" + shipping;
+		$scope.totalCost =  $scope.price + 	$scope.priceEmbroiderFront + rearEmbroidery + $scope.shipping;
+		$scope.priceShip = "$" + $scope.shipping;
 	};
 
-
-
-
-
-
-
-
-		// //Get matCost
-		// $scope.matCost = 0;
-		// if($scope.matTwo){
-		// 	$scope.matCost = $scope.price2 + shipping;
-		// 	$scope.totalCost = $scope.matCost;
-		// }else if($scope.matFour){
-		// 	$scope.matCost = $scope.price4 + shipping;
-		// 	$scope.totalCost = $scope.matCost;
-		// }
-
-
-
-
-
 	$scope.setColor = function(matColor){
-		$scope.matColor = is + matColor;
+		$scope.setCarpetColor = is + matColor;
+		$scope.matColor = matColor;
 	};
 
 	$scope.setThreadColor = function(threadColor){
 		$scope.messageThreadColor = "";
 		if($scope.thread == "galant"){
-			$scope.galantThreadColor = is + threadColor;
+			$scope.setGalantThreadColor = is + threadColor;
+			$scope.galantThreadColor = threadColor;
 		}else if($scope.thread == "background"){
-			$scope.backgroundThreadColor = is + threadColor;
+			$scope.setBackgroundThreadColor = is + threadColor;
+			$scope.backgroundThreadColor = threadColor;
 		}else if($scope.thread == "vr4"){
-			$scope.vr4ThreadColor = is + threadColor;
+			$scope.setVr4ThreadColor = is + threadColor;
+			$scope.vr4ThreadColor = threadColor;
 		}else if($scope.thread == "carNumber"){
-			$scope.carNumberThreadColor = is + threadColor;
+			$scope.setCarNumberThreadColor = is + threadColor;
+			$scope.carNumberThreadColor = threadColor;
 		}else{
 			$scope.messageThreadColor = "Please select a button to apply your embroidery color.";
 		}
 
-		$scope.threadColor = is + threadColor;
+		$scope.threadColor = threadColor;
 	};
 
 	$scope.setStyle = function(style){
-		$scope.optionStyle = is + style;
+		$scope.optionStyle = style;
+		$scope.setOptionStyle = is + style;
 		frontEmbroidery = 25;
 		$scope.priceEmbroiderFront = frontEmbroidery;
 		$scope.styleCost = " $" + $scope.priceEmbroiderFront;
@@ -112,20 +100,6 @@ myApp.controller('myController', function($scope, $http){
 		event.preventDefault();
 	}
 
-
-	
-
-
-	// $scope.bindThreadColor = function(galant, badge, vr4){
-	// 	if(#galant-button){
-			
-	// 	}
-	// }
-
-
-
-		
-	
 
 
 
