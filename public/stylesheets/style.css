@@ -671,3 +671,8 @@ body > #container {
 .modal-title {
   text-align: center;
 }
+
+/* line 612, ../../compass/sass/style.scss */
+.info-list {
+  list-style: none;
+}

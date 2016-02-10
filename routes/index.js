@@ -27,8 +27,34 @@ router.post('/payment', function (req, res, next) {
             console.log(req.session.submitData);
             // res.redirect('thank-you')
           }
+
+        // save to MongoDB
+          var order = new Order{
+            order.fullName,
+            order.address1,
+            order.address2,
+            order.city,
+            order.state,
+            order.zip,
+            order.username,
+            order.password,
+            order.accessLevel,
+            order.matOption,
+            order.styleOption,
+            order.galantEmbroideryColor,
+            order.vr4TextColor,
+            order.carNumber,
+            order.carNumberColor,
+            order.shipping,
+            order.totalCost
+          };
+          order.save;
         });
     }
+});
+
+router.get('/payment', function (req, res, next) {
+    res.render('payment');
 });
 
 
@@ -64,7 +90,7 @@ router.get('/delivery', function (req, res, next) {
 });
 
 router.post('/delivery', function (req, res, next) {
-    if(req.session.username){
+    if(req.session){
     // Make sure the user is logged in!      
     var newFullName = req.body.fullName;
     var newAddress1 = req.body.address1;
@@ -74,7 +100,7 @@ router.post('/delivery', function (req, res, next) {
     var newZip = req.body.zip;
     var newDate = req.body.date;
 
-    var query = {username: req.session.username};
+    // var query = {username: req.session.username};
     var updateAddress = {
         fullName: newFullName, 
         address1: newAddress1, 

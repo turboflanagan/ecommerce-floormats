@@ -10,10 +10,33 @@
 			<div id="order-conf-wrapper">
 				<div id="order-header">
 					<h1>Order Detail Confirmation</h1>
+					<h3>Order Number - 0839874</h3>
+					<div id="shipping-info">
+						<ul class="info-list">
+							<li>Name - <%= submitData.fullName %></li>
+							<li><%= submitData.address1 %></li>
+							<li><%= submitData.address2 %></li>
+							<li><%= submitData.City %></li>
+							<li><%= submitData.State %></li>
+							<li><%= submitData.zip %></li>
+							<li>Phone</li>
+							<li>email</li>
+						</ul>
+					</div>
 				</div>
 				<div id="detail-body">
 					<div id="order-info" class="detial-box">
-						
+						<ul class="info-list">
+							<li><%= submitData.matOption %></li>
+							<li><%= submitData.carpetColor %></li>
+							<li><%= submitData.styleOption %></li>
+							<li><%= submitData.galantEmbroideryColor %></li>
+							<li><%= submitData.vr4EmbroideryColor %></li>
+							<li><%= submitData.carNumber %></li>
+							<li><%= submitData.carNumberColor %></li>
+							<li><%= submitData.shipping %></li>
+							<li><%= submitData.totalCost %></li>
+						</ul>
 					</div>
 					<div id="ship-info" class="detial-box">
 						
@@ -22,21 +45,13 @@
 			</div>
 
 			<div>
-				<%= submitData.fullName %>
-				<%= submitData.address1 %>
-				<%= submitData.address2 %>
-				<%= submitData.city %>
-				<%= submitData.State %>
-				<%= submitData.zip %>
-				<%= submitData.matOption %>
-				<%= submitData.carpetColor %>
-				<%= submitData.styleOption %>
-				<%= submitData.galantEmbroideryColor %>
-				<%= submitData.vr4EmbroideryColor %>
-				<%= submitData.carNumber %>
-				<%= submitData.carNumberColor %>
-				<%= submitData.shipping %>
-				<%= submitData.totalCost %>
+				
+				
+				
+				
+				
+				
+				
 
 
 
