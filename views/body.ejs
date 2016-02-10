@@ -5,6 +5,22 @@
 	</div>
 </div>
 
+<% include delivery.html %>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <form action="/payment" method="POST" id="order-button">
+			<script
+				src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+				data-key="pk_test_Ek4iAnVtZLKBd1aApY3rd6po"
+				data-amount=""
+				data-name="TurboFloormats.com"
+				data-description="VR4 Floormat Set"
+				data-locale="auto">
+			</script>
+				<!-- data-image="/128x128.png" -->
+		</form>	
+      </div>
+
 
 <div id="content-body" class="center-wrapper">
 	<div id="options-wrapper">
@@ -255,17 +271,9 @@
 				<div id="total" class="option">
 					<h4>Total {{totalCost}}</h4><div class="pricing">{{}}</div>
 				</div>
-				<form action="/payment" method="POST" id="order-button">
-					<script
-						src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-						data-key="pk_test_Ek4iAnVtZLKBd1aApY3rd6po"
-						data-amount=""
-						data-name="TurboFloormats.com"
-						data-description="VR4 Floormat Set"
-						data-locale="auto">
-					</script>
-						<!-- data-image="/128x128.png" -->
-				</form>								
+				<div id="button-box">
+					<button class="btn btn-primary" type="button" data-toggle="modal" data-target="#myModal">Launch modal</button>
+				</div>						
 			</div>	
 		</div>
 	</div>
@@ -311,6 +319,7 @@
 
 
 
+				
 
 
 

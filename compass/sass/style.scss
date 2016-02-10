@@ -181,6 +181,7 @@
 #order-button {
 	margin: 9px auto;
 	width: 33%;
+	display: inline;
 }
 
 
@@ -235,7 +236,8 @@ body > #container {
 	margin-right: 35px;
 }
 #button-box {
-	// text-align: center;
+	text-align: center;
+	margin-top: 15px;	
 }
 
 .button {
@@ -596,6 +598,12 @@ body > #container {
     margin-top: 0em;
 }
 
+
+// ******************* MODAL STYLING *********************
+
+.modal-title {
+	text-align: center;
+}
 
 
 
