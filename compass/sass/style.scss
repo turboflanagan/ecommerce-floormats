@@ -128,7 +128,6 @@
     position: relative;
     overflow: hidden;
     display: block;
-    height: 500px;	
 }
 
 #content-wrapper {
@@ -143,7 +142,7 @@
 	margin: 10px;
 	margin-right: 45px;
 	padding: 5px;
-	height: 500px;
+	height: auto;
 	display: block;
 }
 
@@ -227,6 +226,12 @@ body > #container {
 #car-number-input {
 	margin: 0 10px 10px 20px;
 }
+
+#rear-numbers {
+    float: left;
+    margin: 20px 42px;
+}
+
 .select-inner {
 	border: 1px solid;
 	border-radius: 4px;
@@ -248,6 +253,10 @@ body > #container {
 	display: inline-block;
 }
 
+#select-carpet-color {
+	padding-top: 10px;
+}
+
 .sprite-list li {
 	height: 115px;
 	width: 150px;
@@ -262,18 +271,22 @@ body > #container {
     border-radius: 4px;	
 }
 
-.sprite-list-thread li {
-	height: 80px;
-	width: 100px;
-	background: url('/images/Embroidery_Colors.jpg');
-    // background-size sets the size of the image to make the 
-    //sprite portion the right size for rendering.
-    background-size: 1400px;
-    background-repeat: no-repeat;
-    list-style-type: none;
-    display:inline-block;
-    margin: 3px;
-    border-radius: 4px;	
+.sprite-list-thread {
+	padding-top: 12px;
+	
+	li {
+		height: 80px;
+		width: 100px;
+		background: url('/images/Embroidery_Colors.jpg');
+	    // background-size sets the size of the image to make the 
+	    //sprite portion the right size for rendering.
+	    background-size: 1400px;
+	    background-repeat: no-repeat;
+	    list-style-type: none;
+	    display:inline-block;
+	    margin: 3px;
+	    border-radius: 4px;	
+	}
 }
 
 .active {
@@ -352,6 +365,9 @@ body > #container {
     background-position: -630px -435px;	
 }
 
+#no-car-number {
+	margin: 0 20px 5px 20px;
+}
 
 #embroidery-sprite {
 	height: 150px;
@@ -514,6 +530,7 @@ body > #container {
 
 #select-mats-body{
 	border: 1px solid;
+	height: 305px;
 }
 
 .mat-count {
@@ -525,7 +542,7 @@ body > #container {
 	margin-left: 25px;
 	vertical-align: top;
 	height: 100%;
-
+	padding-top: 10px;
 }
 
 .mat-set-price {

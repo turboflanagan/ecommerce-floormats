@@ -23,7 +23,7 @@
 					</div>
 					<label><input ng-model="matFour" ng-change="matFour ? selectMat(4) : selectMat(0)" type="checkbox" name="4mats" value="4 pc">4 Pc Mat Set</label>
 					<div class="mat-set-price">
-						<!-- Angular Price Here --><h1>${{price4}}</h1>
+						<!-- Angular Price Here --><h1>{{matPrice4}}</h1>
 					</div>
 				</div>
 				<div class="mat-body-box">
@@ -32,7 +32,7 @@
 					</div>
 					<label><input ng-model="matTwo" ng-change="matTwo ? selectMat(2) : selectMat(0)" type="checkbox" name="2mats" value="2 pc">2 Pc Mat Set</label>
 					<div class="mat-set-price">
-					<!-- Angular Price Here --><h1>${{price2}}</h1>
+					<!-- Angular Price Here --><h1>{{matPrice2}}</h1>
 					</div>
 				</div>
 			</div>
@@ -104,14 +104,19 @@
 
 	<div id="options-wrapper-car-number">
 		<div class="select-wrapper">
+
 			<div class="heading-title">
 				<h1>Car Number for Rear Mats</h1>
 			</div>
 			<form ng-submit="addCarNumber()" action="" method="" accept-charset="utf-8" class="select-inner">
+				<div id="rear-numbers">
+					<img src="/images/rear numbers.jpeg" alt="Rear Mat Numbers">
+				</div>				
 				<div id="car-number-title"><h3>Enter your car number here</h3></div>
 				<input type="text" name="car number" value="" placeholder="100/1000" ng-model="carNumber" id="car-number-input" />
-				<label><input type="checkbox" name="rear-mat-number" ng-model="carNumberNone" value="" />None</label>
+				<label id="no-car-number"><input type="checkbox" name="rear-mat-number" ng-model="carNumberNone" value="" />None</label>
 				<input type="submit" value="add" />
+				
 			</form>	
 		</div>
 	</div>
@@ -254,7 +259,7 @@
 				</div>
 				
 				<div id="total" class="option">
-					<h4>Total {{totalCost}}</h4><div class="pricing">{{}}</div>
+					<h4>Total</h4><div class="pricing">{{totalCost}}</div>
 				</div>
 				<div id="button-box">
 					<button class="btn btn-primary" type="button" data-toggle="modal" data-target="#myModal">Launch modal</button>

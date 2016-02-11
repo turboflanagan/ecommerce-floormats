@@ -3,9 +3,10 @@ var myApp = angular.module('myApp', []);
 myApp.controller('myController', function($scope, $http){
 
 	$scope.price = 0;
-	$scope.matPrice = "";
+	$scope.matPrice2 = "";
+	$scope.matPrice4 = "";
 	$scope.priceEmbroiderFront = 0;
-	$scope.priceEmbroiderRear = 0;
+	$scope.priceEmbroiderRear = "";
 	$scope.priceShip = 0;
 	$scope.matColor = "";
 	$scope.totalCost = 0;
@@ -24,7 +25,9 @@ myApp.controller('myController', function($scope, $http){
 			$scope.matOptionMessage = "is 4pc set";
 			$scope.baseMatOption = "4pc set";
 			$scope.price = price4;
-			$scope.matPrice = "$" + $scope.price;
+			$scope.matPrice4 = "$" + $scope.price;
+			$scope.matPrice2 = "";
+			$scope.matPrice = price4;
 			calcTotal(price4);
 		}else if(numMats == 2){
 			$scope.matFour = false;
@@ -32,7 +35,9 @@ myApp.controller('myController', function($scope, $http){
 			$scope.matOptionMessage = "is 2pc set";
 			$scope.baseMatOption = "2pc set";
 			$scope.price = price2;
-			$scope.matPrice = "$" + $scope.price;
+			$scope.matPrice2 = "$" + $scope.price;
+			$scope.matPrice4 = "";
+			$scope.matPrice = price2;
 			calcTotal(price2);
 			
 		}else{
@@ -46,8 +51,8 @@ myApp.controller('myController', function($scope, $http){
 	};
 
 	function calcTotal(cost){
-		$scope.totalCost =  $scope.price + 	$scope.priceEmbroiderFront + rearEmbroidery + $scope.shipping;
-		$scope.priceShip = "$" + $scope.shipping;
+		$scope.totalCost = "$" + ($scope.price + $scope.priceEmbroiderFront + rearEmbroidery + $scope.shipping);
+		$scope.priceShip = " $" + $scope.shipping;
 	};
 
 	$scope.setColor = function(matColor){
