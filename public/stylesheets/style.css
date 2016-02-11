@@ -676,3 +676,17 @@ body > #container {
 .info-list {
   list-style: none;
 }
+
+/* line 626, ../../compass/sass/style.scss */
+#order-info {
+  width: 40%;
+  margin-left: 5%;
+  height: 25%;
+  display: inline-block;
+  float: right;
+}
+
+/* line 634, ../../compass/sass/style.scss */
+#shipping-info {
+  display: inline-block;
+}

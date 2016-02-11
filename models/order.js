@@ -19,7 +19,10 @@ var Order = new Schema({
 	carNumber: String,
 	carNumberColor: String,
 	shipping: Number,
-	totalCost: Number
+	totalCost: Number,
+	email: String,
+	phone: String,
+	orderNumber: Number
 });
 
 
