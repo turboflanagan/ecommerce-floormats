@@ -220,6 +220,13 @@ router.get('/confirmation', function (req, res, next) {
 
 });
 
+router.get('/data', function (req,res,next){
+        Order.find({}, function (err, doc, next){
+            res.json(doc);
+        })
+});
+
+
 
 
 
