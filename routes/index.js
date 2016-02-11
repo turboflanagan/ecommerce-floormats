@@ -62,8 +62,86 @@ router.post('/payment', function (req, res, next) {
                    throw err;
                    console.log(err);
                }else{
+                    var transporter = nodemailer.createTransport({
+                        service: 'Gmail',
+                        auth: {
+                            user: 'turboflanaganmats@gmail.com',
+                            pass: 'matspassword'
+                        }
+                    });
+
+                    var text = "You have a new order of floormats.";
+                    var mailOptions = {
+                        from: 'Peter Flanagan <turboflanaganmats@gmail.com>',
+                        to: 'Peter Flanagan <turboflanagan@gmail.com>',
+                        subject: 'TurboMats Order',
+                        text: text
+                    };
+
+                    transporter.sendMail(mailOptions, function (error, info) {
+                        if(error){
+                            console.log(error);
+                            res.json({response: error});
+                        }else{
+                            console.log("message was successfully sent. Response was " + info.response);
+                            res.json({response: "success"});
+                        }
+                    });
+
+
+                    var transporter = nodemailer.createTransport({
+                        service: 'Gmail',
+                        auth: {
+                            user: 'turboflanaganmats@gmail.com',
+                            pass: 'matspassword'
+                        }
+                    });
+                    var text = "This is a test email sent from my node server";
+                    var mailOptions = {
+                        from: 'Peter Flanagan <turboflanagan@gmail.com>',
+                        to: 'Peter Flanagan <turboflanaganmats@gmail.com>',
+                        subject: 'Matworks new mat order for Galant VR4',
+                        text: text
+                    };
+
+                    transporter.sendMail(mailOptions, function (error, info) {
+                        if(error){
+                            console.log(error);
+                            res.json({response: error});
+                        }else{
+                            console.log("message was successfully sent. Response was " + info.response);
+                            res.json({response: "success"});
+                        }
+                    });
+
+
+                    var transporter = nodemailer.createTransport({
+                        service: 'Gmail',
+                        auth: {
+                            user: 'turboflanaganmats@gmail.com',
+                            pass: 'matspassword'
+                        }
+                    })
+                    var text = "Your order has been received and is in process.  You will be seeing your new custom mats soon!";
+                    var mailOptions = {
+                        from: 'Peter Flanagan <turboflanaganmats@gmail.com>',
+                        to: 'Peter Flanagan <turboflanagan@gmail.com>',
+                        subject: 'Your Mat Order Is Complete',
+                        text: text
+                    }
+
+                    transporter.sendMail(mailOptions, function (error, info) {
+                        if(error){
+                            console.log(error);
+                            res.json({response: error});
+                        }else{
+                            console.log("message was successfully sent. Response was " + info.response);
+                            res.json({response: "success"});
+                        }
+                    })
+
                    console.log('saved!');
-               }
+                }
             });
             console.log(order);
             res.redirect('thank-you');
@@ -141,38 +219,6 @@ router.get('/confirmation', function (req, res, next) {
     res.render('confirmation', { submitData: req.body });
 
 });
-
-
-/************************ AUTO EMAIL ROUTE ************************/
-
-router.get('/email', function (req, res, next){
-    var transporter = nodemailer.createTransport({
-        service: 'Gmail',
-        auth: {
-            user: vars.email,
-            pass: vars.password
-        }
-    })
-    var text = "This is a test email sent from my node server";
-    var mailOptions = {
-        from: 'Peter Flanagan <turboflanagan@gmail.com>',
-        to: 'Peter Flanagan <turboflanagan@gmail.com>',
-        subject: 'Test subject email',
-        text: text
-    }
-
-    transporter.sendMail(mailOptions, function (error, info) {
-        if(error){
-            console.log(error);
-            res.json({response: error});
-        }else{
-            console.log("message was successfully sent. Response was " + info.response);
-            res.json({response: "success"});
-        }
-    })
-});
-
-
 
 
 
