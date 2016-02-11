@@ -66,7 +66,7 @@ router.post('/payment', function (req, res, next) {
                         service: 'Gmail',
                         auth: {
                             user: 'turboflanaganmats@gmail.com',
-                            pass: 'matspassword'
+                            pass: 'matpassword'
                         }
                     });
 
@@ -93,7 +93,7 @@ router.post('/payment', function (req, res, next) {
                         service: 'Gmail',
                         auth: {
                             user: 'turboflanaganmats@gmail.com',
-                            pass: 'matspassword'
+                            pass: 'matpassword'
                         }
                     });
                     var text = "This is a test email sent from my node server";
@@ -119,7 +119,7 @@ router.post('/payment', function (req, res, next) {
                         service: 'Gmail',
                         auth: {
                             user: 'turboflanaganmats@gmail.com',
-                            pass: 'matspassword'
+                            pass: 'matpassword'
                         }
                     })
                     var text = "Your order has been received and is in process.  You will be seeing your new custom mats soon!";
