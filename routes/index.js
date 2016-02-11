@@ -32,8 +32,21 @@ router.post('/payment', function (req, res, next) {
             for( var i=0; i < 8; i++ ){
                 orderNumber += possible.charAt(Math.floor(Math.random() * possible.length));
             };
+
+
+            console.log('=======================================================')
+            console.log(req.session);
+            console.log('=======================================================')
+
+
             console.log("orderNumber is -> " + orderNumber);
             req.session.submitData.orderNumber = orderNumber;
+
+
+            console.log('=======================================================')
+            console.log(req.session.submitData.totalCost);
+            console.log('=======================================================')
+
             var order = new Order();
 
             order.fullName = req.session.submitData.fullName;

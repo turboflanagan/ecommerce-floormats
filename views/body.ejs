@@ -13,12 +13,12 @@
 			<div class="heading-title">
 				<h1>Select Your Custom Floormats</h1>
 			</div>
-			<div class="select-title">
+			<div class="select-title">i
 				<h3>1. Select Mats</h3>
 			</div>
 			<div id="select-mats-body" class="select-inner">
 				<div class="mat-body-box">
-					<div ng-click="setActive()" id="select-mats-img1" class="mat-image">
+					<div ng-click="matFour ? selectMat(4) : selectMat(0)" id="select-mats-img1" class="mat-image">
 						<img src="/images/4mats.png" alt="4 Mat Option">
 					</div>
 					<label><input ng-model="matFour" ng-change="matFour ? selectMat(4) : selectMat(0)" type="checkbox" name="4mats" value="4 pc">4 Pc Mat Set</label>

@@ -10,6 +10,7 @@ myApp.controller('myController', function($scope, $http){
 	$scope.priceShip = 0;
 	$scope.matColor = "";
 	$scope.totalCost = 0;
+	$scope.orderNumber = "";
 	var price4 = 85;
 	var price2 = 65;
 	$scope.shipping = 15;

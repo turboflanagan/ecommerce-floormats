@@ -233,6 +233,9 @@ body > #container {
 #rear-numbers {
     float: left;
     margin: 20px 42px;
+    img {
+    	border-radius: 5px;
+	}    	
 }
 
 .select-inner {
