@@ -33,19 +33,7 @@ router.post('/payment', function (req, res, next) {
                 orderNumber += possible.charAt(Math.floor(Math.random() * possible.length));
             };
 
-
-            console.log('=======================================================')
-            console.log(req.session);
-            console.log('=======================================================')
-
-
-            console.log("orderNumber is -> " + orderNumber);
             req.session.submitData.orderNumber = orderNumber;
-
-
-            console.log('=======================================================')
-            console.log(req.session.submitData.totalCost);
-            console.log('=======================================================')
 
             var order = new Order();
 
@@ -94,10 +82,8 @@ router.post('/payment', function (req, res, next) {
                     transporter.sendMail(mailOptions, function (error, info) {
                         if(error){
                             console.log(error);
-                            res.json({response: error});
                         }else{
                             console.log("message was successfully sent. Response was " + info.response);
-                            res.json({response: "success"});
                         }
                     });
 
@@ -120,10 +106,8 @@ router.post('/payment', function (req, res, next) {
                     transporter.sendMail(mailOptions, function (error, info) {
                         if(error){
                             console.log(error);
-                            res.json({response: error});
                         }else{
                             console.log("message was successfully sent. Response was " + info.response);
-                            res.json({response: "success"});
                         }
                     });
 
@@ -146,10 +130,8 @@ router.post('/payment', function (req, res, next) {
                     transporter.sendMail(mailOptions, function (error, info) {
                         if(error){
                             console.log(error);
-                            res.json({response: error});
                         }else{
                             console.log("message was successfully sent. Response was " + info.response);
-                            res.json({response: "success"});
                         }
                     })
 
