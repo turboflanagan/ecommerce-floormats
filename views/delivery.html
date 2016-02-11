@@ -8,31 +8,27 @@
       <div class="modal-body">
         <div id="choices" class="container">
 			<div id="plan-wrapper">
-				<div id="delivery-header"><h5>Tell us where you want your mats shipped.</h5></div>
-				<div id="delivery-sub-header"><h5>We look forward to hearing about how much you love your floor mats!</h5></div>
 				<form name="delivery-form", action="/confirmation", method="post">
 					<div id="address-form-box" class="address-block">
 						<div class="row">
 							<div class="col-sm-6">
-								<h2 class="address-label">Address</h2>
+								<h3 class="address-label">Address</h3>
 								<div class="address-lower-text-wrapper">
-									<h4 class="address-lower-text">Full Name</h4>
+									<h5 class="address-lower-text">Full Name</h5>
 									<input type='text', placeholder='Full Name', id="full-name", name="fullName", class="form-control">
-									<div class="address-help-text">Full Name</div>
 
-									<h4 class="address-lower-text"> Address Line 1</h4>
-									<input type='text', placeholder='Address Line 1', id="address1", name="address1", class="form-control">
+									<h5 class="address-lower-text"> Address Line 1</h5>
+									<input type='text', placeholder='Address', id="address1", name="address1", class="form-control">
 									<div class="address-help-text"> Street address, P.O. box, company name, c/o</div>
 
-									<h4 class="address-lower-text"> Address Line 2</h4>
-									<input type='text', placeholder='Address Line 2', id="address2", name="address2", class="form-control">
+									<h5 class="address-lower-text"> Address Line 2</h5>
+									<input type='text', placeholder='Address cont.', id="address2", name="address2", class="form-control">
 									<div class="address-help-text"> Apartment, suite, unit, building, floor, etc.</div>
 
-									<h4 class="address-lower-text"> City</h4>
+									<h5 class="address-lower-text"> City</h5>
 									<input type='text', placeholder='City', id="city", name="City", class="form-control">
-									<div class="address-help-text"> City, town, etc.</div>
 
-									<h4 class="address-lower-text"> State / Province / Region</h4>
+									<h5 class="address-lower-text"> State</h5>
 									<select name='State', id="state", class="form-control">
 										<option value='', selecte>'selected') Select a State</option>
 										<option value='AL'>Alabama</option>
@@ -87,8 +83,15 @@
 										<option value='WI'>Wisconsin</option>
 										<option value='WY'>Wyoming</option>
 									</select>
-									<h4 class="address-lower-text">Zip Code</h4>
+									<h5 class="address-lower-text">Zip Code</h5>
 									<input type='number', placeholder='Zip Code', id="zip", name="zip", class="form-control">
+
+									<h5 class="address-lower-text">Phone Number</h5>
+									<input type='text', placeholder='555-867-5309', id="phone-number", name="phone", class="form-control">
+
+									<h5 class="address-lower-text">Email</h5>
+									<input type='email', placeholder='jenny@email.com', id="email", name="email", class="form-control">
+
 									<input type="hidden" name="matOption" value="{{baseMatOption}}">
 									<input type="hidden" name="carpetColor" value="{{matColor}}">
 									<input type="hidden" name="styleOption" value="{{optionStyle}}">
