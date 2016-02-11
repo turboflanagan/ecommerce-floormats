@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var Order = require('../models/order');
+var nodemailer = require('nodemailer');
+var stripe = require("stripe")("sk_test_qdcjW5fecCmIPkjs1RJRbNpp");
 
 /************************ GET home page route ************************/
 /* . */
@@ -24,31 +26,48 @@ router.post('/payment', function (req, res, next) {
           if(err){
             res.send('You got an err.' + err)
           }else{
-            console.log(req.session.submitData);
-            // res.redirect('thank-you')
-          }
+            var orderNumber = "";
+            var possible = "0123456789";
 
-        // save to MongoDB
-          var order = new Order{
-            order.fullName,
-            order.address1,
-            order.address2,
-            order.city,
-            order.state,
-            order.zip,
-            order.username,
-            order.password,
-            order.accessLevel,
-            order.matOption,
-            order.styleOption,
-            order.galantEmbroideryColor,
-            order.vr4TextColor,
-            order.carNumber,
-            order.carNumberColor,
-            order.shipping,
-            order.totalCost
-          };
-          order.save;
+            for( var i=0; i < 8; i++ ){
+                orderNumber += possible.charAt(Math.floor(Math.random() * possible.length));
+            };
+            console.log("orderNumber is -> " + orderNumber);
+            req.session.submitData.orderNumber = orderNumber;
+            var order = new Order();
+
+            order.fullName = req.session.submitData.fullName;
+            order.address1 = req.session.submitData.address1;
+            order.address2 = req.session.submitData.address2;
+            order.city = req.session.submitData.City;
+            order.state = req.session.submitData.State;
+            order.zip = req.session.submitData.zip;
+            order.password = req.session.submitData.password;
+            order.accessLevel = req.session.submitData.accessLevel;
+            order.matOption = req.session.submitData.matOption;
+            order.styleOption = req.session.submitData.styleOption;
+            order.galantEmbroideryColor = req.session.submitData.galantEmbroideryColor;
+            order.vr4TextColor = req.session.submitData.vr4TextColor;
+            order.carNumber = req.session.submitData.carNumber;
+            order.carNumberColor = req.session.submitData.carNumberColor;
+            order.shipping = req.session.submitData.shipping;
+            order.totalCost = req.session.submitData.totalCost;
+            order.email = req.session.submitData.email;
+            order.phone = req.session.submitData.phone;
+            order.orderNumber = req.session.submitData.orderNumber;
+
+
+            order.save(function(err, order_Saved){
+               if(err){
+                   throw err;
+                   console.log(err);
+               }else{
+                   console.log('saved!');
+               }
+            });
+            console.log(order);
+            res.redirect('thank-you');
+            }        
         });
     }
 });
@@ -92,35 +111,19 @@ router.get('/delivery', function (req, res, next) {
 router.post('/delivery', function (req, res, next) {
     if(req.session){
     // Make sure the user is logged in!      
-    var newFullName = req.body.fullName;
-    var newAddress1 = req.body.address1;
-    var newAddress2 = req.body.address2;
-    var newCity = req.body.city;
-    var newState = req.body.state;
-    var newZip = req.body.zip;
-    var newDate = req.body.date;
+        var newFullName = req.body.fullName;
+        var newAddress1 = req.body.address1;
+        var newAddress2 = req.body.address2;
+        var newCity = req.body.city;
+        var newState = req.body.state;
+        var newZip = req.body.zip;
+        var newDate = req.body.date;
 
     // var query = {username: req.session.username};
-    var updateAddress = {
-        fullName: newFullName, 
-        address1: newAddress1, 
-        address2: newAddress2, 
-        city: newCity, 
-        state: newState, 
-        zip: newZip, 
-        date: newDate
-        };
-    var options = {upsert: true};
-
-        Account.findOneAndUpdate(query, updateAddress, options, function (err, account){
-            if (err){
-                res.send('There was an error saving your account.  Please re-enter or send this error to our help team: ' + err)
-            }else{
-                account.save;
-                res.redirect('/payment');
-            }
-        })
-    }
+    // save to MongoDB
+        
+        res.redirect('/payment');
+    };
 });
 
 
@@ -138,6 +141,40 @@ router.get('/confirmation', function (req, res, next) {
     res.render('confirmation', { submitData: req.body });
 
 });
+
+
+/************************ AUTO EMAIL ROUTE ************************/
+
+router.get('/email', function (req, res, next){
+    var transporter = nodemailer.createTransport({
+        service: 'Gmail',
+        auth: {
+            user: vars.email,
+            pass: vars.password
+        }
+    })
+    var text = "This is a test email sent from my node server";
+    var mailOptions = {
+        from: 'Peter Flanagan <turboflanagan@gmail.com>',
+        to: 'Peter Flanagan <turboflanagan@gmail.com>',
+        subject: 'Test subject email',
+        text: text
+    }
+
+    transporter.sendMail(mailOptions, function (error, info) {
+        if(error){
+            console.log(error);
+            res.json({response: error});
+        }else{
+            console.log("message was successfully sent. Response was " + info.response);
+            res.json({response: "success"});
+        }
+    })
+});
+
+
+
+
 
 
 module.exports = router;
