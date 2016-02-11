@@ -18,8 +18,8 @@
 			</div>
 			<div id="select-mats-body" class="select-inner">
 				<div class="mat-body-box">
-					<div id="select-mats-img1">
-						<img src="/images/4mats.jpeg" alt="4 Mat Option">
+					<div ng-click="setActive()" id="select-mats-img1" class="mat-image">
+						<img src="/images/4mats.png" alt="4 Mat Option">
 					</div>
 					<label><input ng-model="matFour" ng-change="matFour ? selectMat(4) : selectMat(0)" type="checkbox" name="4mats" value="4 pc">4 Pc Mat Set</label>
 					<div class="mat-set-price">
@@ -27,8 +27,8 @@
 					</div>
 				</div>
 				<div class="mat-body-box">
-					<div id="select-mats-img2">
-						<img src="/images/2mats.jpeg" alt="2 Mat Option">
+					<div ng-click="setActive()" id="select-mats-img2" class="mat-image">
+						<img src="/images/2mats.png" alt="2 Mat Option">
 					</div>
 					<label><input ng-model="matTwo" ng-change="matTwo ? selectMat(2) : selectMat(0)" type="checkbox" name="2mats" value="2 pc">2 Pc Mat Set</label>
 					<div class="mat-set-price">
@@ -49,7 +49,7 @@
 			<div id="select-carpet-color" class="select-inner">
 				<div class="">
 					<ul class="sprite-list">
-						<li class="carpet-sprite" ng-click="setColor('green'); setActive()" id="carpet-sprite-hgreen"></li>
+						<li class="carpet-sprite" ng-click="setColor('green')" id="carpet-sprite-hgreen"></li>
 						<li class="carpet-sprite" ng-click="setColor('navy blue')" id="carpet-sprite-nblue"></li>
 						<li class="carpet-sprite" ng-click="setColor('burgundy')" id="carpet-sprite-burg"></li>
 						<li class="carpet-sprite" ng-click="setColor('red')" id="carpet-sprite-red"></li>
