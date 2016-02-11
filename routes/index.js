@@ -98,7 +98,7 @@ router.post('/payment', function (req, res, next) {
                     });
                     var text = "This is a test email sent from my node server";
                     var mailOptions = {
-                        from: 'Peter Flanagan <turboflanagan@gmail.com>',
+                        from: 'Peter Flanagan <turboflanaganmats@gmail.com>',
                         to: 'Peter Flanagan <turboflanaganmats@gmail.com>',
                         subject: 'Matworks new mat order for Galant VR4',
                         text: text
