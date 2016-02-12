@@ -31,7 +31,7 @@ myApp.controller('myController', function($scope, $http){
 			$scope.price = price4;
 			$scope.matPrice4 = "$" + $scope.price;
 			$scope.matPrice2 = "";
-			$scope.matPrice = price4;
+			$scope.matPrice = "$ " + price4;
 			calcTotal(price4);
 			console.log("ng-click works");
 		}else if(numMats == 2){
