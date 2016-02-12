@@ -122,7 +122,7 @@ router.post('/payment', function (req, res, next) {
                     var text = "Your order has been received and is in process.  You will be seeing your new custom mats soon!";
                     var mailOptions = {
                         from: 'Peter Flanagan <turboflanaganmats@gmail.com>',
-                        to: 'Peter Flanagan <turboflanagan@gmail.com>',
+                        to: req.session.submitData.fullName + ' <'+req.session.submitData.email+'>',
                         subject: 'Your Mat Order Is Complete',
                         text: text
                     }

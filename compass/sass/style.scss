@@ -605,11 +605,25 @@ body > #container {
 
 #thank-you-wrapper {
 	text-align: center;
+	h5{
+		line-height: 300%;
+	}
 }
 
+#thank-you-heading {
+	margin: 60px;
+}
 
+#thank-you-message {
+	margin-top: 30px;
+}
 
-
+#thank-you-image {
+	margin-top: 25px;
+	img {
+		border-radius: 5px;
+	}
+}
 
 
 

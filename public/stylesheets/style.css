@@ -687,8 +687,31 @@ body > #container {
 #thank-you-wrapper {
   text-align: center;
 }
+/* line 608, ../../compass/sass/style.scss */
+#thank-you-wrapper h5 {
+  line-height: 300%;
+}
+
+/* line 613, ../../compass/sass/style.scss */
+#thank-you-heading {
+  margin: 60px;
+}
 
 /* line 617, ../../compass/sass/style.scss */
+#thank-you-message {
+  margin-top: 30px;
+}
+
+/* line 621, ../../compass/sass/style.scss */
+#thank-you-image {
+  margin-top: 25px;
+}
+/* line 623, ../../compass/sass/style.scss */
+#thank-you-image img {
+  border-radius: 5px;
+}
+
+/* line 631, ../../compass/sass/style.scss */
 #footer {
   clear: both;
   position: relative;
@@ -697,17 +720,17 @@ body > #container {
   margin-top: 0em;
 }
 
-/* line 628, ../../compass/sass/style.scss */
+/* line 642, ../../compass/sass/style.scss */
 .modal-title {
   text-align: center;
 }
 
-/* line 636, ../../compass/sass/style.scss */
+/* line 650, ../../compass/sass/style.scss */
 .info-list {
   list-style: none;
 }
 
-/* line 650, ../../compass/sass/style.scss */
+/* line 664, ../../compass/sass/style.scss */
 #order-info {
   width: 40%;
   margin-left: 5%;
@@ -716,7 +739,7 @@ body > #container {
   float: right;
 }
 
-/* line 658, ../../compass/sass/style.scss */
+/* line 672, ../../compass/sass/style.scss */
 #shipping-info {
   display: inline-block;
 }
