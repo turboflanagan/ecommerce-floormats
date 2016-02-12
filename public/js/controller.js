@@ -46,6 +46,8 @@ myApp.controller('myController', function($scope, $http){
 			$scope.baseMatOption = "";
 			$scope.priceShip = 0;
 			$scope.matPrice = "";
+			$scope.matPrice2 = "";
+			$scope.matPrice4 = "";
 			$scope.totalCost = 0;
 
 		};
