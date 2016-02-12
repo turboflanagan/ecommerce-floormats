@@ -17,7 +17,7 @@ router.post('/payment', function (req, res, next) {
     console.log(req.session);
     if(req.session){
         stripe.charges.create({
-          amount: 400,
+          amount: req.session.submitData.totalCost * 100,
           currency: "usd",
           source: req.body.stripeToken, // obtained with Stripe.js
           description: "Charge for " + req.body.stripeEmail
@@ -56,7 +56,6 @@ router.post('/payment', function (req, res, next) {
             order.email = req.session.submitData.email;
             order.phone = req.session.submitData.phone;
             order.orderNumber = req.session.submitData.orderNumber;
-
 
             order.save(function(err, order_Saved){
                if(err){

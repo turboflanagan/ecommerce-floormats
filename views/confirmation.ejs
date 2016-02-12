@@ -16,34 +16,34 @@
 
 				<div id="detail-body">
 					<div id="shipping-info">
-						<div id="shipping-info-header">
+						<div id="shipping-info-header" class="info-header">
 							<h4>Shipping Info</h4>
 						</div>
 						<ul class="info-list">
-							<li>Name - <%= submitData.fullName %></li>
-							<li><%= submitData.address1 %></li>
-							<li><%= submitData.address2 %></li>
-							<li><%= submitData.City %></li>
-							<li><%= submitData.State %></li>
-							<li><%= submitData.zip %></li>
-							<li>Phone</li>
-							<li>email</li>
+							<li><span class="info-list-label">Name:  </span><%= submitData.fullName %></li>
+							<li><span class="info-list-label">Address line 1: </span><%= submitData.address1 %></li>
+							<li><span class="info-list-label">Address line 2: </span><%= submitData.address2 %></li>
+							<li><span class="info-list-label">City: </span><%= submitData.City %></li>
+							<li><span class="info-list-label">State: </span><%= submitData.State %></li>
+							<li><span class="info-list-label">Zip Code: </span><%= submitData.zip %></li>
+							<li><span class="info-list-label">Phone Number: </span><%= submitData.phone %></li>
+							<li><span class="info-list-label">email: </span><%= submitData.email %> </li>
 						</ul>
 					</div>				
 					<div id="order-info" class="detial-box">
-						<div id="order-info-header">
+						<div id="order-info-header" class="info-header">
 							<h4>Order Info</h4>
 						</div>
 						<ul class="info-list">
-							<li><%= submitData.matOption %></li>
-							<li><%= submitData.carpetColor %></li>
-							<li><%= submitData.styleOption %></li>
-							<li><%= submitData.galantEmbroideryColor %></li>
-							<li><%= submitData.vr4EmbroideryColor %></li>
-							<li><%= submitData.carNumber %></li>
-							<li><%= submitData.carNumberColor %></li>
-							<li><%= submitData.shipping %></li>
-							<li><%= submitData.totalCost %></li>
+							<li><span class="info-list-label">Your mat set is: </span><%= submitData.matOption %></li>
+							<li><span class="info-list-label">Carpet color: </span><%= submitData.carpetColor %></li>
+							<li><span class="info-list-label">Embroidery Style is: </span><%= submitData.styleOption %></li>
+							<li><span class="info-list-label">Color for "Galant" text: </span><%= submitData.galantEmbroideryColor %></li>
+							<li><span class="info-list-label">Color for VR4 background: </span><%= submitData.vr4EmbroideryColor %></li>
+							<li><span class="info-list-label">Your car number is: </span><%= submitData.carNumber %></li>
+							<li><span class="info-list-label">Color for your car number: </span><%= submitData.carNumberColor %></li>
+							<li><span class="info-list-label">Shipping cost: </span><%= submitData.shipping %></li>
+							<li><span class="info-list-label">Total Cost: </span><%= submitData.totalCost %></li>
 						</ul>
 					</div>
 					<div id="ship-info" class="detial-box">

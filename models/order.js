@@ -22,7 +22,8 @@ var Order = new Schema({
 	totalCost: String,
 	email: String,
 	phone: String,
-	orderNumber: Number
+	orderNumber: Number,
+	stripeTotal: Number
 });
 
 

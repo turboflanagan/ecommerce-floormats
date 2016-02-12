@@ -18,17 +18,17 @@
 			</div>
 			<div id="select-mats-body" class="select-inner">
 				<div class="mat-body-box">
-					<div ng-click="matFour ? selectMat(4) : selectMat(0)" id="select-mats-img1" class="mat-image">
+					<div ng-click="setActive()" id="select-mats-img1" class="mat-image">
 						<img src="/images/4mats.png" alt="4 Mat Option">
 					</div>
-					<label><input ng-model="matFour" ng-change="matFour ? selectMat(4) : selectMat(0)" type="checkbox" name="4mats" value="4 pc">4 Pc Mat Set</label>
+					<label><input id="4mat-select" ng-model="matFour" ng-change="matFour ? selectMat(4) : selectMat(0)" type="checkbox" name="4mats" value="4 pc">4 Pc Mat Set</label>
 					<div class="mat-set-price">
 						<!-- Angular Price Here --><h1>{{matPrice4}}</h1>
 					</div>
 				</div>
 				<div class="mat-body-box">
 					<div ng-click="setActive()" id="select-mats-img2" class="mat-image">
-						<img src="/images/2mats.png" alt="2 Mat Option">
+						<img id="2mat-select" src="/images/2mats.png" alt="2 Mat Option">
 					</div>
 					<label><input ng-model="matTwo" ng-change="matTwo ? selectMat(2) : selectMat(0)" type="checkbox" name="2mats" value="2 pc">2 Pc Mat Set</label>
 					<div class="mat-set-price">
@@ -259,7 +259,7 @@
 				</div>
 				
 				<div id="total" class="option">
-					<h4>Total</h4><div class="pricing">{{totalCost}}</div>
+					<h4>Total</h4><div class="pricing">{{shownTotalCost}}</div>
 				</div>
 				<div id="button-box">
 					<button class="btn btn-primary" type="button" data-toggle="modal" data-target="#myModal">Submit Order</button>

@@ -7,9 +7,10 @@ myApp.controller('myController', function($scope, $http){
 	$scope.matPrice4 = "";
 	$scope.priceEmbroiderFront = 0;
 	$scope.priceEmbroiderRear = "";
-	$scope.priceShip = 0;
+	$scope.priceShip = "";
 	$scope.matColor = "";
 	$scope.totalCost = 0;
+	$scope.stripeTotal = 0;
 	$scope.orderNumber = "";
 	var price4 = 85;
 	var price2 = 65;
@@ -17,6 +18,8 @@ myApp.controller('myController', function($scope, $http){
 	var is = "is: ";
 	var frontEmbroidery = 0;
 	var rearEmbroidery = 0;
+	var isSelected = false;
+
 
 	$scope.selectMat = function(numMats){
 		id="select-mats-img2"
@@ -30,6 +33,7 @@ myApp.controller('myController', function($scope, $http){
 			$scope.matPrice2 = "";
 			$scope.matPrice = price4;
 			calcTotal(price4);
+			console.log("ng-click works");
 		}else if(numMats == 2){
 			$scope.matFour = false;
 			$scope.matTwo = true;
@@ -40,6 +44,7 @@ myApp.controller('myController', function($scope, $http){
 			$scope.matPrice4 = "";
 			$scope.matPrice = price2;
 			calcTotal(price2);
+			console.log("ng-click works");
 			
 		}else{
 			$scope.matOptionMessage = "";
@@ -54,7 +59,9 @@ myApp.controller('myController', function($scope, $http){
 	};
 
 	function calcTotal(cost){
-		$scope.totalCost = "$" + ($scope.price + $scope.priceEmbroiderFront + rearEmbroidery + $scope.shipping);
+		$scope.totalCost = ($scope.price + $scope.priceEmbroiderFront + rearEmbroidery + $scope.shipping);
+		$scope.stripeTotal = $scope.totalCost * 100;
+		$scope.shownTotalCost = "$ " + $scope.totalCost;
 		$scope.priceShip = " $" + $scope.shipping;
 	};
 
